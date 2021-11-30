@@ -1,0 +1,10 @@
+[
+  {
+    "key": "deneme",
+    "androidValue": "com.hepsiexpress.distributor.beta:id/dialogBase_tvMessage",
+    "androidType": "id",
+    "iosValue": "//XCUIElementTypeApplication[@name=\"Ozdilekteyim\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField",
+    "iosType": "xpath"
+  }
+
+]
