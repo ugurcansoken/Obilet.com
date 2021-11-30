@@ -97,7 +97,7 @@ public class HookImpl {
             capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 300);
         } else {
             capabilities.setCapability("key", System.getenv("key"));
-            capabilities.setCapability("testinium:key", "allianz:c97328a52d6bcf9aac41876f195ad427");
+            capabilities.setCapability("testinium:key", "teb2:1897885d546edef3f9152718ac36db31");
         }
         return capabilities;
     }
