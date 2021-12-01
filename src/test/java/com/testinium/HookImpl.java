@@ -56,7 +56,6 @@ public class HookImpl {
                     appiumDriver = new IOSDriver<>(localUrl, iosCapabilities(true));
                 }
             } else {
-
                 if (System.getenv("platform").equals("ANDROID")) {
                     logger.info("Testiniumda Android ortamında test ayağa kalkacak");
                     appiumDriver = new AndroidDriver(hubUrl, androidCapabilities(false));
@@ -97,7 +96,7 @@ public class HookImpl {
             capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 300);
         } else {
             capabilities.setCapability("key", System.getenv("key"));
-            capabilities.setCapability("testinium:key", "teb2:1897885d546edef3f9152718ac36db31");
+            capabilities.setCapability("testinium:key", "mehmetaksahin:66e85f66c902b99253229b608203e5e2");
         }
         return capabilities;
     }
