@@ -95,8 +95,9 @@ public class HookImpl {
             capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "android");
             capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 300);
         } else {
-            capabilities.setCapability("key", System.getenv("key"));
+            //capabilities.setCapability("key", System.getenv("key"));
             capabilities.setCapability("testinium:key", "mehmetaksahin:66e85f66c902b99253229b608203e5e2");
+            capabilities.setCapability("testinium:testID", System.getenv("testID"));
         }
         return capabilities;
     }
