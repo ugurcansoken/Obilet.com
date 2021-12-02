@@ -90,12 +90,15 @@ public class HookImpl {
         capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.android.chrome");
         capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.google.android.apps.chrome.Main");
 
+
         if (isLocal) {
             capabilities.setCapability(MobileCapabilityType.PLATFORM, MobilePlatform.ANDROID);
             capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "android");
             capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 300);
         } else {
             //capabilities.setCapability("key", System.getenv("key"));
+            capabilities.setCapability("testinium:takesScreenshot", true);
+            capabilities.setCapability("testinium:recordsVideo", true);
             capabilities.setCapability("testinium:key", "mehmetaksahin:66e85f66c902b99253229b608203e5e2");
             capabilities.setCapability("testinium:testID", System.getenv("testID"));
         }
@@ -151,7 +154,6 @@ public class HookImpl {
             logger.info(executionContext.getCurrentStep().getStackTrace());
         }
     }
-
 
 
 }
