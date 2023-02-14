@@ -1,8 +1,8 @@
-package com.testinium.selector;
+package com.clickmelive.selector;
 
-import com.testinium.helper.StoreHelper;
-import com.testinium.model.ElementInfo;
-import com.testinium.model.SelectorInfo;
+import com.clickmelive.helper.StoreHelper;
+import com.clickmelive.model.ElementInfo;
+import com.clickmelive.model.SelectorInfo;
 import org.openqa.selenium.By;
 
 public interface Selector {

@@ -1,0 +1,82 @@
+Created by ugurcan on 23.01.2023
+
+This is a concept file with following syntax for each concept.
+# Keşfette videolar kaydirilir ve videoların kaydigi dogrulanir
+* "kesfetVideoAdiTextiA" elementin text degeri bir dizine at
+* "338","1003" coordinatından "340","485" coordinatına "1" kere swipe et
+* "kesfetVideoAdiTextiA" elementin text degeri bir dizine at
+* String listenin "1". elemaninin "2". elemanina gore "eşit değil" olup olmadigini karsilastir
+
+# Kesfette magaza takip edilir
+* Elementine tıkla "kesfetteMagazayiTakipEtmeButonuA"
+* "2" saniye bekle
+* "kesfetteMagazayiTakipEtmeButonuA" elementinin olmadigi kontrol edilir
+
+# Kesfette urun cantasi acilir, sepete urun eklenir ve kontrol edilir
+* Elementine tıkla "AnasayfaMenuButonuPS"
+* Elementine tıkla "kesfetVideosundakiUrunCantasiA"
+* "yayindaListelenenUrunlerdenSecilenUrununIsmiU" elementin text degeri bir dizine at
+* Elementine tıkla "videoIcerisindeUrunuSepeteEklemeButonuU"
+* Elementine tıkla "sepetimMenuButonuSPT"
+* "sepeteEklenenUrunAdiSepettekiAdiSPT" elementin text degeri bir dizine at
+* String listenin "1". elemaninin "2". elemanina gore "eşit" olup olmadigini karsilastir
+
+# Kesfette urun cantasi acilir, urun secilir, urunun detayina gidilir ve kontrol edilir
+* Elementine tıkla "AnasayfaMenuButonuPS"
+* Elementine tıkla "kesfetVideosundakiUrunCantasiA"
+* "yayindaListelenenUrunlerdenSecilenUrununIsmiU" elementin text degeri bir dizine at
+* Elementine tıkla "yayindaListelenenUrunlerdenSecilenUrununIsmiU"
+* "urunDetayindakiUrunIsmıSPT" elementin text degeri bir dizine at
+* String listenin "1". elemaninin "2". elemanina gore "eşit" olup olmadigini karsilastir
+
+# Kesfette urun cantasi acilir, urun secilir, urun fiyati kaydedilir, urunun detayina gidilir ve kontrol edilir
+* Elementine tıkla "AnasayfaMenuButonuPS"
+* Elementine tıkla "kesfetVideosundakiUrunCantasiA"
+* "urunlerSayfasiIlkUrununFiyatTextiUD" elementin text degeri bir dizine at
+* Elementine tıkla "yayindaListelenenUrunlerdenSecilenUrununIsmiU"
+* "urunDetayindanUrunFiyatiKaydetmeUD" elementin text degeri bir dizine at
+* String listenin "1". elemaninin "2". elemanina gore "eşit" olup olmadigini karsilastir
+
+# Yayin akisina gidilir ve kontrol edilir
+* Elementine tıkla "AnasayfaMenuButonuPS"
+* "10" saniye bekle
+* Elementine tıkla "kesfetSayfasiYayinAkisiButonuA"
+* "yayinAkisiSayfasiKontroluA" elementinin görünürlüğü kontrol edilir
+
+# Yayin akisindan random kategori secilir ve tumunu goruntule butonuna tiklanir
+* "yayinAkisiTumunuGorButonuA" li elementi rasgele sec
+* "yayinAkisiTumunuGorSayfasiKontroluA" elementinin görünürlüğü kontrol edilir
+* "yayinAkisiSayfasiKontroluA" elementinin görünürlüğü kontrol edilir
+
+# Yayin akisindaki yayin ismi kaydedilir, yayin detayina gidilir ve yayin ismi ile yayin detayindaki yayin ismi karsilastirilir
+* "yayinAkisindakiYayininIsmiA" elementin text degeri bir dizine at
+* Elementine tıkla "yayinAkisindakiYayininIsmiA"
+* "kesfetVideoAdiTextiA" elementin text degeri bir dizine at
+* String listenin "1". elemaninin "2". elemanina gore "eşit" olup olmadigini karsilastir
+
+# Yayin akisindan random yayin secilir
+* "yayinAkisindakiRastgeleYayinSecmeA" li elementi rasgele sec
+
+# Yayin detayindaki urun sepeti acilir ve kontrol edilir
+* Elementine tıkla "kesfetVideosundakiUrunCantasiA"
+* "yayindaListelenenUrunlerdenSecilenUrununIsmiU" elementinin görünürlüğü kontrol edilir
+
+# Kucuk moda alinan yayin kapatilir
+* Elementine tıkla "AnasayfaMenuButonuPS"
+* Elementine tıkla "anasayfaKesfetButonuA"
+
+# Videolar sayfasina gidilir ve kontrol edilir
+* Elementine tıkla "anasayfaVideolarButonuA"
+* "videolarSayfasiKontroluA" elementinin "text" attirbute degeri "Tüm Videolar" iceriyor mu
+* "videolarSayfasiVideolarinİzlenmeSayisiA" elementinin görünürlüğü kontrol edilir
+
+# Rastgele filtre kategorisi secilir
+* Elementine tıkla "videolarSayfasiKontroluA"
+* "videoFiltrelemesindeKategoriyiRastgeleSecimYapmaA" li elementi rasgele sec
+* Elementine tıkla "uygulaButonuA"
+
+# Rastgele siralama kategorisi secilir
+* Elementine tıkla "videolarSayfasiKontroluA"
+* Elementine tıkla "SiralaButonuA"
+* "videoFiltrelemesindeKategoriyiRastgeleSecimYapmaA" li elementi rasgele sec
+* Elementine tıkla "uygulaButonuA"

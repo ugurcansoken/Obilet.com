@@ -1,0 +1,12 @@
+Created by ugurcan on 13.02.2023
+
+This is a concept file with following syntax for each concept.
+# Uygulamanin acildigi kontrol edilir iOS
+* "UygulamaninAcildigiKontroluPS" elementinin görünürlüğü kontrol edilir
+
+
+# Urunler sayfasina gidilir ve random bir urun secilir iOS
+* Elementine tıkla "UrunlerimMenuButonuPS"
+* Elementine tıkla "urunlerSayfasiElektronikKategorisiButonuPS"
+* "1" kere aşağıya kaydır
+* "urunlerSayfasindanRandomUrunSecilirPS" li elementi rasgele sec

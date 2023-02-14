@@ -1,4 +1,4 @@
-package com.testinium.helper;
+package com.clickmelive.helper;
 
 import java.security.SecureRandom;
 import java.util.Locale;

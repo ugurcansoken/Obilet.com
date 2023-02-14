@@ -1,0 +1,144 @@
+Created by ugurcan on 8.08.2022
+
+This is a concept file with following syntax for each concept.
+
+# Sepetin bos oldugu kontrol edilir ve bos degilse sepet bosaltilir
+* Elementine tıkla "sepetimMenuButonuSPT"
+* "sepettekiUrunSayisiniAzaltmaButonuSPT" li element varsa tıkla
+* "sepetBosTextiPS" elementinin "text" attirbute degeri "Henüz sepetine ürün atmadın" iceriyor mu
+
+# Urun detayindan sepete gidilir
+* Elementine tıkla "urunDetayindaSepetButonuPS"
+
+
+# Sepete gidilir ve sepetteki urun adi bir dizine atilir
+* Elementine tıkla "urunDetayindaSepetButonuPS"
+* "sepeteEklenenUrunAdiSepettekiAdiSPT" elementin text degeri bir dizine at
+
+# Sepete gidilir
+* Elementine tıkla "urunDetayindaSepetButonuPS"
+
+# Kaydedilen 2 urun adi karsilastirilir ve sepete dogru urun eklendigi kontrol edilir
+* String listenin "1". elemaninin "2". elemanina gore "eşit" olup olmadigini karsilastir
+
+# Magaza detayindan random urun secilir urun adi bir dizine atilir ve sepete eklenir
+* "magazaDetayindaUrunListesiPS" li elementi rasgele sec
+* "sepeteEklenenUrunAdiSPT" elementin text degeri bir dizine at
+* Elementine tıkla "sepeteEkleButonuPS"
+
+# Sepetteki satici isimleri karsilastirilir
+* "sepetteki1SaticiIsmıSPT" elementin text degeri bir dizine at
+* "sepetteki2SaticiIsmıSPT" elementin text degeri bir dizine at
+* String listenin "1". elemaninin "2". elemanina gore "eşit değil" olup olmadigini karsilastir
+
+# Sepetteki urunun sayisi arttirilir ve kontrol edilir
+* "sepettekiUrunSayisiTextiSPT" elementin integer degerini bir dizine at
+* Elementine tıkla "sepettekiUrunSayisiniArttirmaButonuSPT"
+* "sepettekiUrunSayisiTextiSPT" elementin integer degerini bir dizine at
+* Integer listenin "1". elemaninin "2". elemanina gore "küçük" olup olmadigini karsilastir
+
+# Sepetteki urunun sayisi 3 adet yapilir ve hata mesaji kontrol edilir
+* Elementine tıkla "sepettekiUrunSayisiniArttirmaButonuSPT"
+* Elementine tıkla "sepettekiUrunSayisiniArttirmaButonuSPT"
+* "urunSatinAlmaLimitineUlastinizTextiSPT" elementinin "text" attirbute degeri "Bu ürün için satın alma limitine ulaştınız." iceriyor mu
+* Elementine tıkla "urunSatinAlmaLimitineUlastinizOnaylamaButonuSPT"
+
+
+# Sepetteki urunun sayisi azaltilir ve kontrol edilir
+* Elementine tıkla "sepettekiUrunSayisiniAzaltmaButonuSPT"
+* "sepetBosTextiPS" elementinin "text" attirbute degeri "Henüz sepetine ürün atmadın" iceriyor mu
+
+# 1 Adet urunden tik isareti kaldirilir
+* Elementine tıkla "sepetteRadioButondanUrunKaldirmaSPT"
+
+# Odenecek tutar ile secili olan urunun fiyati karsilastirilir ve secili olan urunle isleme devam edilir
+* "ikinciUrununSepettekiFiyatıSPT" elementin text degeri bir dizine at
+* "odenecekTutarSPT" elementin text degeri bir dizine at
+* String listenin "1". elemaninin "2". elemanina gore "eşit" olup olmadigini karsilastir
+* Elementine tıkla "sepetiOnaylaButonuSPT"
+
+# <indirimKodu> indirim kodu girilir
+* Elementine tıkla "indirimKoduButonuSPT"
+* <indirimKodu> textini "indirimKoduTextboxiSPT" elementine yaz
+* Elementine tıkla "indirimKodunuUygulaButonuSPT"
+* "518","1079" coordinatından "524","1360" coordinatına "1" kere swipe et
+
+# <hataliIndirimKodu> indirim kodu girilir ve hata mesajı goruntulenir
+* Elementine tıkla "indirimKoduButonuSPT"
+* <hataliIndirimKodu> textini "indirimKoduTextboxiSPT" elementine yaz
+* Elementine tıkla "indirimKodunuUygulaButonuSPT"
+* "hataliIndirimKoduTextiSPT" elementinin "text" attirbute degeri "Bir hata oluştu. Lütfen tekrar deneyin" iceriyor mu
+* "518","1079" coordinatından "524","1360" coordinatına "1" kere swipe et
+* "359","352" koordinatlarına tıkla
+
+# Sepete urunu ekleyemedigi ve Giris yap sayfasina yonlendirdigi kontrol edilir
+* "girisYapButonuSPT" elementinin görünürlüğü kontrol edilir
+
+# Odenecek tutar ile toplam tutar bir dizine atilir ve karsilastirilir
+* "odenecekTutarSPT" elementin text degeri bir dizine at
+* "toplamTutarTekUrunluSPT" elementin text degeri bir dizine at
+* String listenin "1". elemaninin "2". elemanina gore "eşit" olup olmadigini karsilastir
+
+# Magaza detayindan random urun secilir, urun fiyati bir dizine atilir ve sepete eklenir
+* "magazaDetayindaUrunListesiPS" li elementi rasgele sec
+* "urunDetayindakiFiyatiSPT" elementin text degeri bir dizine at
+* Elementine tıkla "sepeteEkleButonuPS"
+
+# Magaza detayindan random urun secilir, satici ismi bir dizine atilir ve sepete eklenir
+* "magazaDetayindaUrunListesiPS" li elementi rasgele sec
+* "urunDetayindakiSaticiIsmıSPT" elementin text degeri bir dizine at
+* Elementine tıkla "sepeteEkleButonuPS"
+
+# Magaza detayindan random urun secilir, urunun ismi bir dizine atilir ve sepete eklenir
+* "magazaDetayindaUrunListesiPS" li elementi rasgele sec
+* "urunDetayindakiUrunIsmıSPT" elementin text degeri bir dizine at
+* Elementine tıkla "sepeteEkleButonuPS"
+
+# Urunun sepetteki fiyati bir dizine atilir ve urun detay sayfasindaki fiyati ile karsilastirilir
+* "urununSepettekiFiyatıSPT" elementin text degeri bir dizine at
+* String listenin "1". elemaninin "2". elemanina gore "eşit" olup olmadigini karsilastir
+
+# Urunun sepetteki satici ismi bir dizine atilir ve urun detay sayfasindaki satici ismi ile karsilastirilir
+* "sepetteki1SaticiIsmıSPT" elementin text degeri bir dizine at
+* String listenin "1". elemaninin "2". elemanina gore "eşit" olup olmadigini karsilastir
+
+# Urunun sepetteki ismi bir dizine atilir ve urun detay sayfasindaki urun ismi ile karsilastirilir
+* "sepeteEklenenUrunAdiSepettekiAdiSPT" elementin text degeri bir dizine at
+* String listenin "1". elemaninin "2". elemanina gore "eşit" olup olmadigini karsilastir
+
+# Searchboxtan <urunadi> isimli urun aratilir ve aratilan urun secilir
+* Elementine tıkla "AnasayfaMenuButonuPS"
+* Elementine tıkla "searchboxSPT"
+* <urunadi> textini "searchboxaTikladiktanSonraTextGirmeSPT" elementine yaz
+* "655","1401" koordinatlarına tıkla
+* Elementine tıkla "searchboxtaUrunKategorisiSPT"
+* Elementine tıkla "searchboxtaAratilanUrunuSecmeSPT"
+* "1" kere yukarı doğru kaydır
+
+# Urunun rengi bir dizine atilir ve sepete eklenir
+* "urunDetayindakiUrunRengiSPT" elementin text degeri bir dizine at
+* Elementine tıkla "sepeteEkleButonuPS"
+
+# Urun detayinda secilen renk ile sepette gosterilen urun rengi karsilastirilir
+* "urununSepetteGosterilenRengiSPT" elementin text degeri bir dizine at
+* String listenin "1". elemaninin "1". elemanina gore "eşit" olup olmadigini karsilastir
+
+
+# Urunun bedeni bir dizine atilir ve sepete eklenir
+* "1" kere yukarı doğru kaydır
+* "urunDetayindaSecilenBeden" elementin text degeri bir dizine at
+* Elementine tıkla "sepeteEkleButonuPS"
+
+# Urun detayinda secilen beden ile sepette gosterilen urunun bedeni karsilastirilir
+* "urununSepetteGosterilenBedeniSPT" elementin text degeri bir dizine at
+* String listenin "1". elemaninin "1". elemanina gore "eşit" olup olmadigini karsilastir
+
+# Urun fiyati bir dizine atilir, urun adeti arttirilir ve yeni fiyat ile karsilastirilir
+* "urununSepettekiFiyatıSPT" elementin text degeri bir dizine at
+* Elementine tıkla "sepettekiUrunSayisiniArttirmaButonuSPT"
+* "odenecekTutarSPT" elementin text degeri bir dizine at
+* String listenin "2". elemaninin "1". elemanina gore "büyük" olup olmadigini karsilastir
+
+# Urun sepete eklenir
+* Elementine tıkla "sepeteEkleButonuPS"
+

@@ -1,0 +1,213 @@
+Created by ugurcan on 9.08.2022
+
+This is a concept file with following syntax for each concept.
+
+# Sepet onaylanir ve isleme devam edilir
+* Elementine tıkla "sepetiOnaylaButonuSPT"
+
+# Adres ekleme sayfasina gidilir
+* "kayitliAdresYoksaEkranaGelenAdresEkleButonuOD" li element varsa tek tıkla
+* "teslimatAdresiEkleButonuOD" li element varsa tek tıkla
+* "adresEkleButonuOD" li element varsa tek tıkla
+
+# Fatura adresi ekleme/duzenleme sayfasina gidilir
+* Elementine tıkla "faturaAdresiEkleDuzenleButonuOD"
+* "adresEkleButonuOD" li element varsa tek tıkla
+
+# <adresBasligi>, <adSoyad>, <cepTelefonu> bilgileri doldurulur ve adres bilgileri secilir
+* <adresBasligi> textini "adresBasligiTextboxiOD" elementine yaz
+* "adresBasligiTextboxiOD" elementin text degeri bir dizine at
+* <adSoyad> textini "adSoyadBasligiTextboxiOD" elementine yaz
+* <cepTelefonu> textini "cepTelefonuTextboxiOD" elementine yaz
+* Elementine tıkla "ilButonuOD"
+* "illerinListesiOD" li elementi rasgele sec
+* Elementine tıkla "ilceButonuOD"
+* "ilceListesiOD" li elementi rasgele sec
+* Elementine tıkla "mahalleButonuOD"
+* "2" saniye bekle
+* "mahalleListesiOD" li elementi rasgele sec
+* "1" kere yukarı doğru kaydır
+* "adres bilgisi" textini "adresBilgisiTextboxiOD" elementine yaz
+* Elementine tıkla "kaydetButonuOD"
+* "3" saniye bekle
+
+
+# Adresin kaydedildigi dogrulanir
+* "teslimatAdresiEkleButonuOD" li element varsa tek tıkla
+* "3" saniye bekle
+* "adreslerimSayfasindakiAdresBasligiOD" elementin text degeri bir dizine at
+* String listenin "1". elemaninin "2". elemanina gore "eşit" olup olmadigini karsilastir
+* Elementine tıkla "adresBilgileriSayfasindanGeriDonButonuOD"
+
+# Kayitli adres secilir, duzenleme yapilir ve kaydedilir
+* Elementine tıkla "kayitliAdresLinearLayoutOD"
+* "adresBasligiTextboxiOD" li elementi bul, temizle ve "İş yeri" değerini yaz
+* "1" kere yukarı doğru kaydır
+* Elementine tıkla "kaydetButonuOD"
+* Elementine tıkla "adresBilgileriSayfasindanGeriDonButonuOD"
+
+# Adres degistir butonuna tiklanir ve farkli adres secilir
+* Elementine tıkla "adresDegistirButonuOD"
+
+# Adres basligi bir dizine atilir, adres degistirilir ve yeni adresin degistigi kontrol edilir
+* "sepetiOnaylaButonuSPT" li element varsa tek tıkla
+* "guvenliOdemeSayfasiKayitliAdresinAdresBasligiTextiOD" elementin text degeri bir dizine at
+* Elementine tıkla "adresDegistirButonuOD"
+* Elementine tıkla "kayitliAdresListesindenFarkliAdresSecmeOD"
+* "guvenliOdemeSayfasiKayitliAdresinAdresBasligiTextiOD" elementin text degeri bir dizine at
+* String listenin "1". elemaninin "2". elemanina gore "eşit değil" olup olmadigini karsilastir
+
+# Faturami ayni adrese gonder checkboxindaki isaret kaldirilir ve Fatura adresi basliginin geldigi kontrol edilir
+* Elementine tıkla "faturamiAyniAdreseGonderCheckboxiOD"
+* "faturaAdresiBasligiOD" elementinin "text" attirbute degeri "Fatura Adresi" iceriyor mu
+
+# Fatura adresi degistir butonuna tiklanir ve farkli bir adres secilir
+* "guvenliOdemeSayfasiKayitliAdresinAdresBasligiTextiOD" elementin text degeri bir dizine at
+* Elementine tıkla "faturaAdresiDegistirButonuOD"
+* Elementine tıkla "kayitliAdresListesindenFarkliAdresSecmeOD"
+
+# Teslimat adresi ile fatura adresi karsilastirilir
+* "guvenliOdemeSayfasiKayitliFaturaAdresBasligiTextiOD" elementin text degeri bir dizine at
+* String listenin "1". elemaninin "2". elemanina gore "eşit değil" olup olmadigini karsilastir
+
+
+# Adres basligi bir dizine atilir
+* Elementine tıkla "faturaAdresiEkleDuzenleButonuOD"
+* "kayitliAdresListesindenSonEklenenAdresBasligiOD" elementin text degeri bir dizine at
+
+
+# Fatura adresini degistir butonuna tiklanir ve son eklenen fatura adresi secilir
+* Elementine tıkla "faturaAdresiDegistirButonuOD"
+* Elementine tıkla "kayitliAdresListesindenSonEklenenAdresiSecmeOD"
+* "guvenliOdemeSayfasiKayitliFaturaAdresBasligiTextiOD" elementin text degeri bir dizine at
+
+# Fatura adresinin en son eklenen adres secildigi dogrulanir
+* String listenin "1". elemaninin "2". elemanina gore "eşit" olup olmadigini karsilastir
+
+# Kart ekleme sayfasina yonlendirilir
+* "kayitliKartBilgisiYoksaKartEkleButonuOD" li element varsa tek tıkla
+* "baskaKartEkleButonuOD" li element varsa tek tıkla
+* "kayitliKartBilgisiYoksaKartEkleButonuOD" li element varsa tek tıkla
+
+# Profil sayfasindan kart bilgilerim sayfasina gidilir ve kart bilgileri temizlenir
+* "sepetimdenGeriDonmeButonuSPT" li element varsa tek tıkla
+* "sepetimdenGeriDonmeButonuSPT" li element varsa tek tıkla
+* "urunDetayindanGeriDonmeButonuSPT" li element varsa tek tıkla
+* "GeriDonButonuPS" li element varsa tek tıkla
+* Elementine tıkla "ProfilimMenuButonuPS"
+* Elementine tıkla "kartBilgilerimButonuPS"
+* "kartBilgileriSayfasiKartListesi" elementinin hizasından sağdan sola "1" kere kaydır
+* "kartBilgileriSayfasindanGeriDonButonuOD" li element varsa tek tıkla
+
+# Profil sayfasindan kart bilgilerim sayfasina gidilir ve birden fazla kart bilgileri temizlenir
+* "sepetimdenGeriDonmeButonuSPT" li element varsa tek tıkla
+* "sepetimdenGeriDonmeButonuSPT" li element varsa tek tıkla
+* "urunDetayindanGeriDonmeButonuSPT" li element varsa tek tıkla
+* "GeriDonButonuPS" li element varsa tek tıkla
+* Elementine tıkla "ProfilimMenuButonuPS"
+* Elementine tıkla "kartBilgilerimButonuPS"
+* "kartBilgileriSayfasiKartListesi" elementinin hizasından sağdan sola "1" kere kaydır
+* "kartBilgileriSayfasiKartListesi" elementinin hizasından sağdan sola "1" kere kaydır
+* "kartBilgileriSayfasindanGeriDonButonuOD" li element varsa tek tıkla
+
+# Profil sayfasindan adres bilgilerim sayfasina gidilir ve adres bilgileri temizlenir
+* "sepetimdenGeriDonmeButonuSPT" li element varsa tek tıkla
+* "sepetimdenGeriDonmeButonuSPT" li element varsa tek tıkla
+* "urunDetayindanGeriDonmeButonuSPT" li element varsa tek tıkla
+* "GeriDonButonuPS" li element varsa tek tıkla
+* Elementine tıkla "ProfilimMenuButonuPS"
+* Elementine tıkla "adresBilgilerimButonuPS"
+* "adresBilgileriSayfasiKartListesiOD" elementinin hizasından sağdan sola "1" kere kaydır
+* Elementine tıkla "adresBilgisiniSilmeyiOnaylamaButonuOD"
+* "adresBilgileriSayfasindanGeriDonButonuOD" li element varsa tek tıkla
+
+# Profil sayfasindan adres bilgilerim sayfasina gidilir ve birden fazla adres bilgisi temizlenir
+* "sepetimdenGeriDonmeButonuSPT" li element varsa tek tıkla
+* "sepetimdenGeriDonmeButonuSPT" li element varsa tek tıkla
+* "urunDetayindanGeriDonmeButonuSPT" li element varsa tek tıkla
+* "GeriDonButonuPS" li element varsa tek tıkla
+* Elementine tıkla "ProfilimMenuButonuPS"
+* Elementine tıkla "adresBilgilerimButonuPS"
+* "adresBilgileriSayfasiKartListesiOD" elementinin hizasından sağdan sola "1" kere kaydır
+* Elementine tıkla "adresBilgisiniSilmeyiOnaylamaButonuOD"
+* "adresBilgileriSayfasiKartListesiOD" elementinin hizasından sağdan sola "1" kere kaydır
+* Elementine tıkla "adresBilgisiniSilmeyiOnaylamaButonuOD"
+* "adresBilgileriSayfasindanGeriDonButonuOD" li element varsa tek tıkla
+
+# <kartIsmi>, <kartUzerindekiIsmı>, <SKT> bilgileri girilerek kart bilgileri doldurulur
+* <kartIsmi> textini "kartEklemeKartIsmiTextboxiOD" elementine yaz
+* <kartUzerindekiIsmı> textini "kartEklemeKartUzerindekiIsimTextboxiOD" elementine yaz
+* "4609 5900 0073 0249" textini "kartEklemeKartNoTextboxiOD" elementine yaz
+* <SKT> textini "kartEklemeSKTTextboxiOD" elementine yaz
+* Elementine tıkla "kaydetButonuOD"
+
+
+# Guvenli odeme sayfasinda Baska kart sec butonuna tiklanir
+* Elementine tıkla "baskaKartEkleButonuOD"
+
+# Kart bilgileri sayfasindan Kart Ekle butonuna tiklanir
+* Elementine tıkla "kayitliKartBilgisiYoksaKartEkleButonuOD"
+
+# Kart secimi degistirilir ve kontrol edilir
+* "guvenliOdemeSayfasiKartBilgileriLayoutuKartIsmiTextiOD" elementin text degeri bir dizine at
+* Elementine tıkla "baskaKartEkleButonuOD"
+* Elementine tıkla "kartlarListesindenIlkSiradakiKartSecimiOD"
+* Elementine tıkla "kartBilgileriSayfasindanGeriDonButonuOD"
+* "guvenliOdemeSayfasiKartBilgileriLayoutuKartIsmiTextiOD" elementin text degeri bir dizine at
+* String listenin "1". elemaninin "2". elemanina gore "eşit değil" olup olmadigini karsilastir
+
+# MasterCard logosunun gorunurlugu kontrol edilir
+* "masterCardLogosuOD" elementinin görünürlüğü kontrol edilir
+* Elementine tıkla "kartBilgileriSayfasindanGeriDonButonuOD"
+
+# Visa logosunun gorunurlugu kontrol edilir
+* "visaLogosuOD" elementinin görünürlüğü kontrol edilir
+* Elementine tıkla "kartBilgileriSayfasindanGeriDonButonuOD"
+
+
+# Amex logosunun gorunurlugu kontrol edilir
+* "amexLogosuOD" elementinin görünürlüğü kontrol edilir
+* Elementine tıkla "kartBilgileriSayfasindanGeriDonButonuOD"
+
+
+# Troy logosunun gorunurlugu kontrol edilir
+* "troyLogosuOD" elementinin görünürlüğü kontrol edilir
+* Elementine tıkla "kartBilgileriSayfasindanGeriDonButonuOD"
+
+# Sozlesmeyi kabul etmeden alisverisi tamamla butonuna tiklanir ve hata dogrulanir
+* Elementine tıkla "sepetiOnaylaButonuSPT"
+* "onBilgilendirmeKosulTextiOD" elementinin "text" attirbute degeri "Lütfen Ön Bilgilendirme Koşulları'nı ve Mesafeli Satış Sözleşmesi'ni kabul ediniz." iceriyor mu
+* Elementine tıkla "onBilgilendirmeKosulHatasiniKabulEtmeButonuOD"
+
+# Sozlesmeyi kabul edip alisverisi <dogrulamaKodu> dogrulama kodu ile siparisi tamamlama
+* Elementine tıkla "onBilgilendirmeKosulunuSecmeCheckboxiOD"
+* Elementine tıkla "sepetiOnaylaButonuSPT"
+* <dogrulamaKodu> textini "dogrulamaKodu" elementine yaz
+* Elementine tıkla "dogrulamaKodunuOnayla"
+
+# 3D hatasi kontrol edilir
+* "3dOdemeHataMesajiSPT" elementinin "text" attirbute degeri "3D Secure payment failure." iceriyor mu
+
+# Kart bilgisi eksik hata mesaji kontrol edilir
+* Elementine tıkla "onBilgilendirmeKosulunuSecmeCheckboxiOD"
+* Elementine tıkla "sepetiOnaylaButonuSPT"
+* "genelHataMesajlariSPT" elementinin "text" attirbute degeri "Lütfen kart bilgilerinizi ekleyin." iceriyor mu
+* Elementine tıkla "genelHataMesajlariTamamButonuSPT"
+
+# Adres bilgisi eksik hata mesaji kontrol edilir
+* Elementine tıkla "onBilgilendirmeKosulunuSecmeCheckboxiOD"
+* Elementine tıkla "sepetiOnaylaButonuSPT"
+* "genelHataMesajlariSPT" elementinin "text" attirbute degeri "Lütfen adres bilgisini ekleyin." iceriyor mu
+* Elementine tıkla "genelHataMesajlariTamamButonuSPT"
+
+# On bilgilendirme kosulu secilir ve sepet onaylanir
+* Elementine tıkla "onBilgilendirmeKosulunuSecmeCheckboxiOD"
+* Elementine tıkla "sepetiOnaylaButonuSPT"
+
+
+# Siparisin alindigi dogrulanir
+* "siparisinizAlindiTextiPS" elementinin "text" attirbute degeri "Siparişiniz Alındı" iceriyor mu
+* Elementine tıkla "siparisinizAlindiSayfasindanCikisButonuPS"
+
+# SSL Secured logosunun gorunurlugu kontrol edilir
+* "SSLSecuredLogosu" elementinin görünürlüğü kontrol edilir

@@ -5,16 +5,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.testinium</groupId>
-    <artifactId>testinium-mobileJUnit5</artifactId>
+    <groupId>ClickmeLivem</groupId>
+    <artifactId>ClickmeLive</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>Testinium Mobile</name>
+    <name>ClickmeLive</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <gauge.version>0.6.9</gauge.version>
+        <gauge.version>0.9.1</gauge.version>
         <gauge.plugin.version>1.4.1</gauge.plugin.version>
         <appium.version>7.0.0</appium.version>
         <junit.version>5.1.0</junit.version>

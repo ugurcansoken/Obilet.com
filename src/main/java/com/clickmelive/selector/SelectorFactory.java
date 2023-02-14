@@ -1,4 +1,4 @@
-package com.testinium.selector;
+package com.clickmelive.selector;
 
 public class SelectorFactory {
 

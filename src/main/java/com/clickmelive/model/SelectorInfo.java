@@ -1,4 +1,4 @@
-package com.testinium.model;
+package com.clickmelive.model;
 
 import org.openqa.selenium.By;
 

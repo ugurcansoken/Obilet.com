@@ -1,6 +1,6 @@
-package com.testinium.selector;
+package com.clickmelive.selector;
 
-import com.testinium.model.ElementInfo;
+import com.clickmelive.model.ElementInfo;
 import io.appium.java_client.MobileBy;
 import org.openqa.selenium.By;
 
@@ -22,6 +22,10 @@ public class IOSSelector implements Selector {
         } else if (elementInfo.getIosType().equals("classChain")) {
             by = MobileBy.iOSClassChain(elementInfo.getIosValue());
         }
+        else if (elementInfo.getIosType().equals("accessibility")) {
+            by = MobileBy.AccessibilityId(elementInfo.getIosValue());
+        }
+
         return by;
     }
 

@@ -1,0 +1,168 @@
+[
+  {
+    "key": "secilenMarkaninMarkaAdiUD",
+    "androidValue": "com.clickme.clickmelive.debug:id/text_view_username",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "sepettekiSaticiAdiUD",
+    "androidValue": "com.clickme.clickmelive.debug:id/text_view_seller_name",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "searchboxtaUrunAratildiktanSonraRandomVideoSecmeUD",
+    "androidValue": "//*[@resource-id='com.clickme.clickmelive.debug:id/material_card_view_video']",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "videoIcerisindenUrunleriListelemeUD",
+    "androidValue": "com.clickme.clickmelive.debug:id/ivProduct",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "videoIcerisindenUrunSecmeUD",
+    "androidValue": "(//*[@resource-id='com.clickme.clickmelive.debug:id/ivProduct'])[1]",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "ilgiliVideolarBasligiTextiUD",
+    "androidValue": "com.clickme.clickmelive.debug:id/rv_events",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "ilgiliVideolarBasligiTumunuGorButonuUD",
+    "androidValue": "com.clickme.clickmelive.debug:id/button_see_all",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "ilgiliVideolarSayfasiIcerisindenKontrolUD",
+    "androidValue": "//*[@resource-id='com.clickme.clickmelive.debug:id/text_view_title']",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "searchboxSayfasiGeriDonButonuUD",
+    "androidValue": "com.clickme.clickmelive.debug:id/button_back",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "urunDetaySayfasiPaylasButonuUD",
+    "androidValue": "com.clickme.clickmelive.debug:id/button_share",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "urunDetaySayfasiPaylasEkraniTextiUD",
+    "androidValue": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.ListView/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.TextView",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "urunDetaySayfasiPaylasEkraniKopyalaButonuUD",
+    "androidValue": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.ListView/android.widget.LinearLayout[3]/android.widget.LinearLayout[2]/android.widget.TextView",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "sepetSayfasiBasligiUD",
+    "androidValue": "com.clickme.clickmelive.debug:id/text_view_title",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "urunDetaySayfasindanGorselZoomlamaUD",
+    "androidValue": "com.clickme.clickmelive.debug:id/ivProduct",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "urunlerSayfasiIlkUrununFiyatTextiUD",
+    "androidValue": "(//*[@resource-id='com.clickme.clickmelive.debug:id/tvPrice'])[1]",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "urunlerSayfasiIlkUrununIsimTextiUD",
+    "androidValue": "(//*[@resource-id='com.clickme.clickmelive.debug:id/tvProductTitle'])[1]",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "urunlerSayfasiIlkUrununSaticiIsmiTextiUD",
+    "androidValue": "(//*[@resource-id='com.clickme.clickmelive.debug:id/tvSellerName'])[1]",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "urunlerSayfasindaIlkUrunuSecmeUD",
+    "androidValue": "(//*[@resource-id='com.clickme.clickmelive.debug:id/productView'])[1]",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "urunDetayindanUrunFiyatiKaydetmeUD",
+    "androidValue": "com.clickme.clickmelive.debug:id/tv_price",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "urunDetayindanUrunIsminiKaydetmeUD",
+    "androidValue": "com.clickme.clickmelive.debug:id/tvProductName",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "urunDetayindanUrunSaticiIsminiKaydetmeUD",
+    "androidValue": "com.clickme.clickmelive.debug:id/tv_seller_name",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "urunDetayindanRandomRenkSecmeUD",
+    "androidValue": "//*[@resource-id='com.clickme.clickmelive.debug:id/variant_picker_color_item']",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "urunDetayindanRandomBedenSecmeUD",
+    "androidValue": "//*[@resource-id='com.clickme.clickmelive.debug:id/variant_picker_body_item']",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  }
+
+
+
+
+
+]

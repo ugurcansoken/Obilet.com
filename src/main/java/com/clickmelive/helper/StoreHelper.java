@@ -1,8 +1,8 @@
-package com.testinium.helper;
+package com.clickmelive.helper;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.testinium.model.ElementInfo;
+import com.clickmelive.model.ElementInfo;
 
 import java.io.File;
 import java.io.FileNotFoundException;

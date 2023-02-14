@@ -1,8 +1,8 @@
-package com.testinium;
+package com.clickmelive;
 
-import com.testinium.selector.Selector;
-import com.testinium.selector.SelectorFactory;
-import com.testinium.selector.SelectorType;
+import com.clickmelive.selector.Selector;
+import com.clickmelive.selector.SelectorFactory;
+import com.clickmelive.selector.SelectorType;
 import com.thoughtworks.gauge.AfterScenario;
 import com.thoughtworks.gauge.AfterStep;
 import com.thoughtworks.gauge.BeforeScenario;
@@ -30,7 +30,7 @@ public class HookImpl {
     private Logger logger = LoggerFactory.getLogger(getClass());
     protected static AppiumDriver<MobileElement> appiumDriver;
     protected static FluentWait<AppiumDriver> appiumFluentWait;
-    public static boolean localAndroid = true;
+    public static boolean localAndroid = false;
     protected static Selector selector;
     DesiredCapabilities capabilities;
     URL localUrl;
@@ -45,14 +45,14 @@ public class HookImpl {
             logger.info(executionContext.getAllTags().toString());
 
             localUrl = new URL("http://127.0.0.1:4723/wd/hub");
-            hubUrl = new URL("http://hub.testinium.io/wd/hub");
+            hubUrl = new URL("http://hub.io/wd/hub");
 
             if (StringUtils.isEmpty(System.getenv("key"))) {
                 if (localAndroid) {
                     logger.info("Local cihazda Android ortamında test ayağa kalkacak");
                     appiumDriver = new AndroidDriver(localUrl, androidCapabilities(true));
                 } else {
-                    logger.info("Local cihazda Android ortamında test ayağa kalkacak");
+                    logger.info("Local cihazda iOS ortamında test ayağa kalkacak");
                     appiumDriver = new IOSDriver<>(localUrl, iosCapabilities(true));
                 }
             } else {
@@ -87,8 +87,8 @@ public class HookImpl {
         capabilities.setCapability(MobileCapabilityType.FULL_RESET, false);
         capabilities.setCapability("unicodeKeyboard", false);
         capabilities.setCapability("resetKeyboard", false);
-        capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.android.chrome");
-        capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.google.android.apps.chrome.Main");
+        capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.clickme.clickmelive.debug");
+        capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.clickme.clickmelive.core.activity.MainActivity");
 
 
         if (isLocal) {
@@ -111,7 +111,7 @@ public class HookImpl {
         capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
         capabilities.setCapability(MobileCapabilityType.FULL_RESET, false);
         capabilities
-                .setCapability("bundleId", "com.ozdilek.ozdilekteyim");
+                .setCapability("bundleId", "com.clickmelive.clickmelive");
         if (!islocal) {
             capabilities.setCapability("key", System.getenv("key"));
             capabilities.setCapability("waitForAppScript", "$.delay(1000);");
@@ -123,10 +123,10 @@ public class HookImpl {
             capabilities
                     .setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
 
-            capabilities.setCapability(MobileCapabilityType.UDID, "1e5cdbbadc4a7dc3e4389298330bad5c587904d5");
-            capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone SE");
+            capabilities.setCapability(MobileCapabilityType.UDID, "9e232c782a23e75e9ff8f54aa526388cdf34ad34");
+            capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone");
 
-            capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "12.5");
+            capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "15.7");
 
             capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 300);
             capabilities.setCapability("sendKeyStrategy", "setValue");
@@ -144,6 +144,9 @@ public class HookImpl {
         }
 
         logger.info("*************************************************************************" + "\r\n");
+        logger.info("TEST BİTTİ" + "\r\n");
+        logger.info("*************************************************************************" + "\r\n");
+
     }
 
     @AfterStep

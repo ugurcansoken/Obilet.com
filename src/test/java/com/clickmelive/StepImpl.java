@@ -1,8 +1,8 @@
-package com.testinium;
+package com.clickmelive;
 
-import com.testinium.helper.RandomString;
-import com.testinium.helper.StoreHelper;
-import com.testinium.model.SelectorInfo;
+import com.clickmelive.helper.RandomString;
+import com.clickmelive.helper.StoreHelper;
+import com.clickmelive.model.SelectorInfo;
 import com.thoughtworks.gauge.Step;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
@@ -21,18 +21,23 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.annotation.Nullable;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 import static java.time.Duration.ofMillis;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class StepImpl extends HookImpl {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
+    private  List<Integer> integerList=new ArrayList<>();
+    private  List<String> stringList=new ArrayList<>();
+    private static HashMap<String, String> userVariableHashMap = new HashMap<>();
+    private static String kaydedilmisNumara;
+
 
     public StepImpl() {
 
@@ -172,7 +177,7 @@ public class StepImpl extends HookImpl {
     @Step({"Değeri <text> e eşit olan elementli bul ve tıkla",
             "Find element text equals <text> and click"})
     public void clickByText(String text) {
-        findElementWithAssertion(By.xpath(".//*[contains(@text,'" + text + "')]")).click();
+        findElementWithAssertion(By.xpath(".//*[contains(@text,'"+text+"')]")).click();
     }
 
     @Step({"İçeriği <value> e eşit olan elementli bul ve tıkla",
@@ -201,21 +206,33 @@ public class StepImpl extends HookImpl {
     public void clickByKey(String key) {
         doesElementExistByKey(key, 5);
         findElementByKey(key).click();
-        logger.info(key + "elemente tıkladı");
+        logger.info(key + " elementine tıkladı");
+        System.out.println("-----------------------------------------------------------------");
+
     }
 
     @Step({"<key> elementinin <value> attirbute degeri <check> iceriyor mu"})
     public void clickByKey(String key, String value, String check) {
         doesElementExistByKey(key, 5);
         logger.info(key + "elementinin " + value + " degeri:" + findElementByKey(key).getAttribute(value));
+        System.out.println("-----------------------------------------------------------------");
 
         assertTrue(findElementByKey(key).getAttribute(value).contains(check), "Veriler Eşleşmiyor");
+        System.out.println("-----------------------------------------------------------------");
 
     }
 
     @Step({"<key> elementinin görünürlüğü kontrol edilir"})
     public void existElement(String key) {
         assertTrue(findElementByKey(key).isDisplayed(), "Element sayfada bulunamadı !");
+        logger.info(key + " elementi göründü");
+        System.out.println("-----------------------------------------------------------------");
+
+    }
+    @Step("<key> elementinin olmadigi kontrol edilir")
+    public void notExistElement(String key) {
+        assertFalse(doesElementExistByKey(key,10), "Element mevcut !");
+        logger.info("Elementin olmadığı doğrulandı");
     }
 
     @Step("<key> elementinin <text> textini içerdiği kontrol edilir")
@@ -233,10 +250,13 @@ public class StepImpl extends HookImpl {
         MobileElement element;
         element = findElementByKeyWithoutAssert(key);
         if (element != null) {
-            System.out.println("  varsa tıklaya girdi");
+            //System.out.println("  varsa tıklaya girdi");
             Point elementPoint = ((MobileElement) element).getCenter();
             TouchAction action = new TouchAction(appiumDriver);
             action.tap(PointOption.point(elementPoint.x, elementPoint.y)).perform();
+            logger.info(key + " elementi bulundu");
+            System.out.println("-----------------------------------------------------------------");
+
         }
         waitBySecond(2);
     }
@@ -268,13 +288,22 @@ public class StepImpl extends HookImpl {
         webElement.clear();
         webElement.setValue(text);
     }
+   @Step({"<key> li elementi bul ve temizle",
+            "Find element by <key> clear"})
+    public void clearKeysByKey(String key) {
+        MobileElement webElement = findElementByKey(key);
+        webElement.clear();
+    }
 
 
-    @Step({"<t> textini <k> elemente yaz",
+    @Step({"<t> textini <k> elementine yaz",
             "Find element by <key> and send keys <text>"})
     public void sendKeysByKeyNotClear(String t, String k) {
         doesElementExistByKey(k, 5);
         findElementByKey(k).sendKeys(t);
+        logger.info(t + " texti yazildi.");
+        System.out.println("-----------------------------------------------------------------");
+
 
     }
 
@@ -285,7 +314,7 @@ public class StepImpl extends HookImpl {
         logger.info("Video " + StoreHelper.INSTANCE.getValue(saveKey) + "saniyesinde durduruldu.");
     }
 
-    @Step({"<key> li ve değeri <text> e eşit olan elementli bul ve tıkla",
+    @Step({"<key> li ve değeri <text> e eşit olan elementi bul ve tıkla",
             "Find element by <key> text equals <text> and click"})
     public void clickByIdWithContains(String key, String text) {
         List<MobileElement> elements = findElemenstByKey(key);
@@ -340,6 +369,8 @@ public class StepImpl extends HookImpl {
                 } else {
                     elements.get(0).click();
                     logger.info(key + " elementine tıklandı");
+                    System.out.println("-----------------------------------------------------------------");
+
                     break;
                 }
             } else {
@@ -407,26 +438,24 @@ public class StepImpl extends HookImpl {
     @Step({"<key> li elementi bulana kadar swipe et",
             "Find element by <key>  swipe "})
     public void findByKeyWithSwipe(String key) {
-        int maxRetryCount = 10;
-        while (maxRetryCount > 0) {
-            List<MobileElement> elements = findElemenstByKey(key);
-            if (elements.size() > 0) {
-                if (elements.get(0).isDisplayed() == false) {
-                    maxRetryCount--;
 
+        try {
+            while (true) {
+                TimeUnit.SECONDS.sleep(1);
+                if (findElementByKey(key) != null) {
                     swipeDownAccordingToPhoneSize();
-
                 } else {
-                    System.out.println(key + " element bulundu");
                     break;
                 }
-            } else {
-                maxRetryCount--;
-                swipeDownAccordingToPhoneSize();
-
             }
-
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
+    }
+
+    public void justSwipe() {
+        TouchAction action = new TouchAction(appiumDriver);
+        action.press(PointOption.point(500, 2000)).moveTo(PointOption.point(500, 500)).release().perform();
     }
 
 
@@ -473,6 +502,8 @@ public class StepImpl extends HookImpl {
     }
 
 
+
+
     @Step({"<key> li elementin değeri <text> e içerdiğini kontrol et",
             "Find element by <key> and text contains <text>"})
     public void containsTextByKey(String key, String text) {
@@ -504,10 +535,13 @@ public class StepImpl extends HookImpl {
                 ExpectedConditions.textToBe(selector.getElementInfoToBy(key), text)));
     }
 
-    @Step({"<seconds> saniye bekle ", "Wait <second> seconds"})
+    @Step({"<seconds> saniye bekle", "Wait <second> seconds"})
     public void waitBySecond(int seconds) {
         try {
             TimeUnit.SECONDS.sleep(seconds);
+            logger.info(seconds + " saniye beklendi");
+            System.out.println("-----------------------------------------------------------------");
+
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -538,6 +572,41 @@ public class StepImpl extends HookImpl {
             int swipeStartWidth = width / 2, swipeEndWidth = width / 2;
             int swipeStartHeight = (height * 35) / 100;
             int swipeEndHeight = (height * 75) / 100;
+            //appiumDriver.swipe(swipeStartWidth, swipeStartHeight, swipeEndWidth, swipeEndHeight, 1000);
+            new TouchAction(appiumDriver)
+                    .press(PointOption.point(swipeStartWidth, swipeEndHeight))
+                    .waitAction(WaitOptions.waitOptions(ofMillis(2000)))
+                    .moveTo(PointOption.point(swipeEndWidth, swipeStartHeight))
+                    .release()
+                    .perform();
+        }
+    }
+
+  public void swipeTwoUpAccordingToPhoneSize() {
+        if (appiumDriver instanceof AndroidDriver) {
+            Dimension d = appiumDriver.manage().window().getSize();
+            int height = d.height;
+            int width = d.width;
+            System.out.println(width + "  " + height);
+
+            int swipeStartWidth = width / 2, swipeEndWidth = width / 2;
+            int swipeStartHeight = (height * 10) / 100;
+            int swipeEndHeight = (height * 60) / 100;
+            //appiumDriver.swipe(swipeStartWidth, swipeStartHeight, swipeEndWidth, swipeEndHeight, 1000);
+            new TouchAction((AndroidDriver) appiumDriver)
+                    .press(PointOption.point(swipeStartWidth, swipeEndHeight))
+                    .waitAction(WaitOptions.waitOptions(ofMillis(2000)))
+                    .moveTo(PointOption.point(swipeEndWidth, swipeStartHeight))
+                    .release()
+                    .perform();
+        } else {
+            Dimension d = appiumDriver.manage().window().getSize();
+            int height = d.height;
+            int width = d.width;
+
+            int swipeStartWidth = width / 2, swipeEndWidth = width / 2;
+            int swipeStartHeight = (height * 25) / 100;
+            int swipeEndHeight = (height * 60) / 100;
             //appiumDriver.swipe(swipeStartWidth, swipeStartHeight, swipeEndWidth, swipeEndHeight, 1000);
             new TouchAction(appiumDriver)
                     .press(PointOption.point(swipeStartWidth, swipeEndHeight))
@@ -615,6 +684,19 @@ public class StepImpl extends HookImpl {
         }
     }
 
+  @Step({"<times> kere hafif yukarı doğru kaydır", "Swipe up times <times>"})
+    public void swipeUPTwo(int times) throws InterruptedException {
+        for (int i = 0; i < times; i++) {
+            swipeTwoUpAccordingToPhoneSize();
+            waitBySecond(1);
+
+            System.out.println("-----------------------------------------------------------------");
+            System.out.println("SWİPE EDİLDİ");
+            System.out.println("-----------------------------------------------------------------");
+
+        }
+    }
+
 
     @Step({"Klavyeyi kapat", "Hide keyboard"})
     public void hideAndroidKeyboard() {
@@ -640,10 +722,6 @@ public class StepImpl extends HookImpl {
     }
 
 
-    @Step({"<length> uzunlugunda random bir kelime üret ve <saveKey> olarak sakla"})
-    public void createRandomNumber(int length, String saveKey) {
-        StoreHelper.INSTANCE.saveValue(saveKey, new RandomString(length).nextString());
-    }
 
     @Step("geri butonuna bas")
     public void clickBybackButton() {
@@ -766,7 +844,9 @@ public class StepImpl extends HookImpl {
             elementExist.until(ExpectedConditions.visibilityOfElementLocated(selectorInfo.getBy()));
             return true;
         } catch (Exception e) {
-            logger.info(key + " aranan elementi bulamadı");
+            logger.info(key + " elementi araniyor");
+            System.out.println("-----------------------------------------------------------------");
+
             return false;
         }
 
@@ -950,5 +1030,223 @@ public class StepImpl extends HookImpl {
         a2.tap(PointOption.point(x, y)).perform();
         logger.info("tıklama yapıldı");
     }
+
+    // --------------------------------------------------------------------------------------------------
+
+    @Step("<key> elementin integer degerini bir dizine at")
+    public void getIntFromElement(String key){
+        String text = findElementByKey(key).getText();
+        integerList.add(Integer.valueOf(text));
+        logger.info(text+" degeri dizine atıldı");
+        System.out.println("-----------------------------------------------");
+    }
+
+    @Step("<key> elementin text degeri bir dizine at")
+    public void getTextList(String key){
+        String text = findElementByKey(key).getText();
+        stringList.add(text);
+        logger.info(text+" texti dizine atıldı");
+        System.out.println("-----------------------------------------------");
+
+    }
+    @Step("Bellekte kaydedilen liste ve mapleri temizle")
+    public void clearListsFromRam() {
+        stringList.clear();
+        integerList.clear();
+        userVariableHashMap.clear();
+    }
+    @Step("<key> elementinden TL harflerini sil ve Integer dizine kaydet")
+    public void revomeTLFromPriceAndSave(String key){
+        String value=findElementByKey(key).getText();
+        value = value.replaceAll(" TL", "");
+        value = value.replaceAll("\\,", "");
+        int sayi=(Integer.parseInt(value));
+        integerList.add(sayi);
+        logger.info(sayi +" degerini dizine atıldı");
+    }
+    @Step("Integer listenin <index1>. elemaninin <index2>. elemanina gore <condition> olup olmadigini karsilastir")
+   //* Integer listenin "2". elemaninin "1". elemanina gore "küçük" olup olmadigini karsilastir
+    public void compareTwoInteger(int index1, int index2, String condition) {
+        if(condition.equals("büyük")) {
+            assertTrue(integerList.get(index1-1) > integerList.get(index2-1),index1+". eleman, "+index2+". elemandan büyük değil.Elemanlar: "+integerList.get(index1-1)+" ve "+integerList.get(index2-1));
+            logger.info(index1+". eleman, "+index2+". elemandan büyük.Elemanlar: "+integerList.get(index1-1)+" ve "+integerList.get(index2-1));
+            System.out.println("-----------------------------------------------");
+
+        }
+        else if(condition.equals("küçük")) {
+            assertTrue(integerList.get(index1-1) < integerList.get(index2-1),index1+". eleman, "+index2+". elemandan küçük değil.Elemanlar: "+integerList.get(index1-1)+" ve "+integerList.get(index2-1));
+            logger.info(index1+". eleman, "+index2+". elemandan küçük.Elemanlar: "+integerList.get(index1-1)+" ve "+integerList.get(index2-1));
+            System.out.println("-----------------------------------------------");
+
+        }
+        else if(condition.equals("eşit değil")) {
+            assertTrue(integerList.get(index1-1) == integerList.get(index2-1),index1+". eleman, "+index2+". elemana eşit değil.Elemanlar: "+integerList.get(index1-1)+" ve "+integerList.get(index2-1));
+            logger.info(index1+". eleman, "+index2+". elemana eşit değil.Elemanlar: "+integerList.get(index1-1)+" ve "+integerList.get(index2-1));
+            System.out.println("-----------------------------------------------");
+
+        }
+        else if(condition.equals("eşit")) {
+            assertTrue(integerList.get(index1-1) != integerList.get(index2-1),index1+". eleman, "+index2+". elemana eşit.Elemanlar: "+integerList.get(index1-1)+" ve "+integerList.get(index2-1));
+            logger.info(index1+". eleman, "+index2+". elemana eşit.Elemanlar: "+integerList.get(index1-1)+" ve "+integerList.get(index2-1));
+            System.out.println("-----------------------------------------------");
+
+        }
+        else {
+            Assertions.fail("Hatali koşul girişi yapılmıştır");
+        }
+    }
+
+    @Step("String listenin <index1>. elemaninin <index2>. elemanina gore <condition> olup olmadigini karsilastir")
+    public void compareTwoString(int index1, int index2, String condition) {
+        if(condition.equals("büyük")) {
+            assertTrue(stringList.get(index1-1).compareTo(stringList.get(index2-1)) > 0,index1+". eleman, "+index2+". elemandan büyük değil.Elemanlar: "+stringList.get(index1-1)+" ve "+stringList.get(index2-1));
+            logger.info(index1+". eleman, "+index2+". elemandan büyük.Elemanlar: "+stringList.get(index1-1)+" ve "+stringList.get(index2-1));
+        }
+        else if(condition.equals("küçük")) {
+            assertTrue(stringList.get(index1-1).compareTo(stringList.get(index2-1)) < 0,index1+". eleman, "+index2+". elemandan küçük değil.Elemanlar: "+stringList.get(index1-1)+" ve "+stringList.get(index2-1));
+            logger.info(index1+". eleman, "+index2+". elemandan küçük.Elemanlar: "+stringList.get(index1-1)+" ve "+stringList.get(index2-1));
+        }
+        else if(condition.equals("eşit")) {
+            assertTrue(stringList.get(index1-1).compareTo(stringList.get(index2-1)) == 0,index1+". eleman, "+index2+". elemana eşit değil.Elemanlar: "+stringList.get(index1-1)+" ve "+stringList.get(index2-1));
+            logger.info(index1+". eleman, "+index2+". elemana eşit.Elemanlar: "+stringList.get(index1-1)+" ve "+stringList.get(index2-1));
+        }
+        else if(condition.equals("eşit değil")) {
+            assertTrue(stringList.get(index1-1).compareTo(stringList.get(index2-1)) != 0,index1+". eleman, "+index2+". elemana eşit.Elemanlar: "+stringList.get(index1-1)+" ve "+stringList.get(index2-1));
+            logger.info(index1+". eleman, "+index2+". elemana eşit değil.Elemanlar: "+stringList.get(index1-1)+" ve "+stringList.get(index2-1));
+        }
+        else if(condition.equals("içerir")) {
+            assertTrue(stringList.get(index1-1).contains(stringList.get(index2-1)),index1+". eleman, "+index2+". elemanı içermiyor.Elemanlar: "+stringList.get(index1-1)+" ve "+stringList.get(index2-1));
+            logger.info(index1+". eleman, "+index2+". elemanı içeriyor.Elemanlar: "+stringList.get(index1-1)+" ve "+stringList.get(index2-1));
+        }
+        else {
+            Assertions.fail("Hatali koşul girişi yapılmıştır");
+        }
+    }
+
+
+    @Step("<text> textini içeren elemente kadar aşağı kaydır")
+    public void swipeToElementContainsText(String text) {
+        HashMap<String, Object> scrollObject = new HashMap<>();
+        scrollObject.put("direction", "down");
+        scrollObject.put("name", text);
+        appiumDriver.executeScript("mobile:scroll", scrollObject);
+        appiumDriver.findElementByXPath("//*[@label='"+text+"']").click();
+    }
+    @Step({"<length> uzunlugunda random bir kelime üret ve <saveKey> olarak sakla"})
+    public void createRandomNumber(int length, String saveKey) {
+        StoreHelper.INSTANCE.saveValue(saveKey, new RandomString(length).nextString());
+    }
+
+    @Step("<key> li element varsa tıkla")
+    public void tapElementWithKeyControl(String key) {
+        for (int i = 0; i < key.length(); i++) {
+        boolean ifExist = doesElementExistByKey(key, 5);
+
+
+
+        if (ifExist) {
+
+            findElementByKey(key).click();
+            logger.info(key + "elemente tıkladı");
+            System.out.println("-----------------------------------------------------------------");
+        }
+                else
+                    return;
+            }
+        }
+
+
+
+
+
+    @Step("<key> li element varsa tek tıkla")
+    public void tapElementWithKeyControlTwo(String key) {
+
+     //   logger.info("element varsa tıkla yoksa devam et başladı");
+        boolean ifExist = doesElementExistByKey(key, 5);
+
+
+
+        if (ifExist) {
+            findElementByKey(key).click();
+            logger.info(key + " elemente tıkladı");
+            System.out.println("-----------------------------------------------------------------");
+
+        }
+
+        else {
+           // logger.info(key + " element bulunamadı");
+
+    }
+
+    }
+    @Step("Rastgele date numara uret")
+    public void generateRandomDateNumber() {
+        Date today = new Date();
+        SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("ddMMyyHHmmss");
+        String date = DATE_FORMAT.format(today);
+        kaydedilmisNumara = "5127" + date;
+        logger.info(kaydedilmisNumara);
+    }
+
+    @Step("<key> li elementi bul, temizle ve random numara değerini yaz")
+    public void sendRandomNumber(String key) {
+        MobileElement webElement = findElementByKey(key);
+        webElement.clear();
+        webElement.setValue(kaydedilmisNumara);
+    }
+
+    @Step("<index> li <key> içeren elementin bulunduğu yeri <times> kere <yön> tarafa kaydır")
+    public void swipeDirectionTimes(int index, String key, int times, String yön) {
+        Dimension dimensions = appiumDriver.manage().window().getSize();
+        Point center = null;
+        if (index==1) {
+            center = findElementByKey(key).getCenter();
+        }
+        else if (index>1) {
+            center = findElemenstByKey(key).get(index).getCenter();
+        }
+        else {
+            Assertions.fail("hatalı index girişi");
+        }
+
+        TouchAction action = new TouchAction(appiumDriver);
+        int startPoint = 0;
+        if (yön.equals("sol")) {
+            startPoint = (int) (dimensions.getWidth() * 0.9);
+        }
+        else if(yön.equals("sag")){
+            startPoint = (int) (dimensions.getWidth() * 0.1);
+        }
+        for (int i = 0; i < times; i++) {
+            action.longPress(PointOption.point(startPoint, (center.y)));
+            action.moveTo(PointOption.point(center.x, (center.y)));
+            action.release();
+            action.perform();
+        }
+    }
+
+
+
+
+    @Step("Adreslerim sayfasinda tüm adresleri temizle <key>")
+    public void checkAndDeleteAdress(String key){
+        for(int i = 0 ; i < 5 ; i++){
+            boolean isThreeAdressExist = doesElementExistByKey(key,3);
+            if(isThreeAdressExist){
+                clickByKeyIndex("adresDuzenlemeButonu", 3);
+                System.out.println("adresDuzenlemeButonu" + " elementine tikladi");
+
+                tapElementWithKeyControl("adresGuncellemeBuAdresiSilButonu");
+                waitBySecond(4);
+                tapElementWithKeyControl("adresGuncellemeSilmeSilButonu");
+            }else{
+                System.out.println("Mevcut durumda 3 veya daha az adres bulunmakta");
+            }
+        }
+    }
+
+
+
 
 }

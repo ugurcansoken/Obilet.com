@@ -1,0 +1,305 @@
+[
+  {
+    "key": "UygulamaninAcildigiKontroluSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/profile",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "sepettekiUrunSayisiniAzaltmaButonuSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/button_decrement",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "sepettekiUrunSayisiniArttirmaButonuSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/button_increment",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "sepetimMenuButonuSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/basket",
+    "androidType": "id",
+    "iosValue": "TabBar.Basket",
+    "iosType": "accessibility"
+  },
+  {
+    "key": "sepeteEklenenUrunAdiSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/tvProductName",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "sepeteEklenenUrunAdiSepettekiAdiSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/text_view_product_title",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "sepetteki1SaticiIsmıSPT",
+    "androidValue": "(//*[@resource-id='com.clickme.clickmelive.debug:id/text_view_seller_name'])[1]",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "sepetteki2SaticiIsmıSPT",
+    "androidValue": "(//*[@resource-id='com.clickme.clickmelive.debug:id/text_view_seller_name'])[2]",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "urunDetayindanGeriDonmeButonuSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/btn_back",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "sepettekiUrunSayisiTextiSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/text_view_product_quantity",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "sepetteRadioButondanUrunKaldirmaSPT",
+    "androidValue": "(//*[@resource-id='com.clickme.clickmelive.debug:id/radio_button_selected'])[1]",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "sepetteIkinciUrununFiyatiSPT",
+    "androidValue": "(//*[@resource-id='com.clickme.clickmelive.debug:id/text_view_price'])[2]",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "odenecekTutarSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/text_view_basket_grand_total",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "urununSepettekiFiyatıSPT",
+    "androidValue": "(//*[@resource-id='com.clickme.clickmelive.debug:id/text_view_price'])[1]",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "ikinciUrununSepettekiFiyatıSPT",
+    "androidValue": "(//*[@resource-id='com.clickme.clickmelive.debug:id/text_view_price'])[2]",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "toplamTutarTekUrunluSPT",
+    "androidValue": "(//*[@resource-id='com.clickme.clickmelive.debug:id/text_view_price'])[2]",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "sepetiOnaylaButonuSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/button_approve",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "urunSatinAlmaLimitineUlastinizTextiSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/text_view_content",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "urunSatinAlmaLimitineUlastinizOnaylamaButonuSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/button_single_secondary",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "indirimKoduButonuSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/basket_coupon",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  }
+,
+  {
+    "key": "indirimKoduTextboxiSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/edit_text_code",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "indirimKodunuUygulaButonuSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/button_apply",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "hataliIndirimKoduTextiSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/text_view_error",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "girisYapButonuSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/button_login",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "sepetimdenGeriDonmeButonuSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/button_left",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "urunDetayindakiFiyatiSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/tv_price",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "urunDetayindakiSaticiIsmıSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/tv_seller_name",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "urunDetayindakiUrunIsmıSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/tvProductName",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "searchboxSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/text_view_search",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "searchboxaTikladiktanSonraTextGirmeSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/edit_text_search",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "searchboxtaUrunKategorisiSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/button_products",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "searchboxtaAratilanUrunuSecmeSPT",
+    "androidValue": "//*[@text='Bad Bear Erkek Şeker Tişört Tıtle T-Shırt']",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "urunDetayindakiUrunRengiSPT",
+    "androidValue": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[3]/android.widget.LinearLayout/android.widget.TextView[2]",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "urununSepetteGosterilenRengiSPT",
+    "androidValue": "(//*[@resource-id='com.clickme.clickmelive.debug:id/text_view_variant'])[1]",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "urununSepetteGosterilenBedeniSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/text_view_variant",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "urunDetayindaSecilenBeden",
+    "androidValue": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[3]/android.widget.HorizontalScrollView[2]/android.widget.LinearLayout/androidx.cardview.widget.CardView[1]/android.widget.TextView",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "markalarBasliginiSagYondeKaydirmaSPT",
+    "androidValue": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/androidx.recyclerview.widget.RecyclerView/androidx.cardview.widget.CardView[1]/android.widget.ImageView",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "sepetteBulunanUrunLayoutuSPT",
+    "androidValue": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[3]",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "sepetteBulunanUrunuSilmeyiOnaylamaSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/button_primary",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "3dOdemeHataMesajiSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/text_view_content",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "3dHataMesajiTamamButonuSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/button_single_primary",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "genelHataMesajlariSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/text_view_content",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "genelHataMesajlariTamamButonuSPT",
+    "androidValue": "com.clickme.clickmelive.debug:id/button_single_secondary",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  }
+
+]

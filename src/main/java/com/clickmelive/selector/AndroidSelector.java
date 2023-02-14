@@ -1,6 +1,6 @@
-package com.testinium.selector;
+package com.clickmelive.selector;
 
-import com.testinium.model.ElementInfo;
+import com.clickmelive.model.ElementInfo;
 import org.openqa.selenium.By;
 
 public class AndroidSelector implements Selector {

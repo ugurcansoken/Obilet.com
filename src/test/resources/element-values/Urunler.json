@@ -1,0 +1,130 @@
+[
+{
+  "key": "firsatlarSayfasiBadgeU",
+  "androidValue": "com.clickme.clickmelive.debug:id/ivCampaignBtn",
+  "androidType": "id",
+  "iosValue": "",
+  "iosType": "xpath"
+},{
+  "key": "firsatlarSayfasiBaslikKontroluU",
+  "androidValue": "(//*[@resource-id='com.clickme.clickmelive.debug:id/tvTitle'])[1]",
+  "androidType": "xpath",
+  "iosValue": "",
+  "iosType": "xpath"
+},{
+  "key": "urunlerTumunuGorButonuU",
+  "androidValue": "//*[@resource-id='com.clickme.clickmelive.debug:id/tv_see_all']",
+  "androidType": "xpath",
+  "iosValue": "",
+  "iosType": "xpath"
+},{
+  "key": "urunlerTumunuGorSayfasininKontroluU",
+  "androidValue": "//*[@resource-id='com.clickme.clickmelive.debug:id/ivCoverPhoto']",
+  "androidType": "xpath",
+  "iosValue": "",
+  "iosType": "xpath"
+},{
+  "key": "bannerU",
+  "androidValue": "(//*[@resource-id='com.clickme.clickmelive.debug:id/view_pager_banners'])[1]",
+  "androidType": "xpath",
+  "iosValue": "",
+  "iosType": "xpath"
+},{
+  "key": "markalarBasligiU",
+  "androidValue": "//*[@text='Markalar']",
+  "androidType": "xpath",
+  "iosValue": "",
+  "iosType": "xpath"
+},{
+  "key": "ecrouBasligiU",
+  "androidValue": "//*[@text='Ecrou']",
+  "androidType": "xpath",
+  "iosValue": "",
+  "iosType": "xpath"
+},{
+  "key": "randomVideoSecmeU",
+  "androidValue": "//*[@resource-id='com.clickme.clickmelive.debug:id/text_view_title']",
+  "androidType": "xpath",
+  "iosValue": "",
+  "iosType": "xpath"
+},{
+  "key": "tumVideolariGoruntuleKontroluU",
+  "androidValue": "//*[@resource-id='com.clickme.clickmelive.debug:id/clViewerCount']",
+  "androidType": "xpath",
+  "iosValue": "",
+  "iosType": "xpath"
+},{
+  "key": "tumVideolariGoruntuleSayfasindanRandomVideoSecmeU",
+  "androidValue": "//*[@resource-id='com.clickme.clickmelive.debug:id/image_view_cover']",
+  "androidType": "xpath",
+  "iosValue": "",
+  "iosType": "xpath"
+},{
+  "key": "videoIcerisindeUrunleriListelemeButonuU",
+  "androidValue": "com.clickme.clickmelive.debug:id/ivProduct",
+  "androidType": "id",
+  "iosValue": "",
+  "iosType": "xpath"
+},{
+  "key": "videoIcerisindeUrunuSepeteEklemeButonuU",
+  "androidValue": "(//*[@resource-id='com.clickme.clickmelive.debug:id/ivAdd'])[1]",
+  "androidType": "xpath",
+  "iosValue": "",
+  "iosType": "xpath"
+},{
+  "key": "videoIcerisindekiSepetButonuU",
+  "androidValue": "com.clickme.clickmelive.debug:id/button_basket",
+  "androidType": "id",
+  "iosValue": "",
+  "iosType": "xpath"
+},
+  {
+    "key": "yayindaListelenenUrunlerdenSecilenUrununIsmiU",
+    "androidValue": "(//*[@resource-id='com.clickme.clickmelive.debug:id/tvName'][1])",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "yayindaMagazaDetayinaGitmeButonuU",
+    "androidValue": "com.clickme.clickmelive.debug:id/image_view_user",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "magazaDetayindakiUrunSayisiU",
+    "androidValue": "com.clickme.clickmelive.debug:id/text_view_follower_count",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "videoIcerisindenPaylasButonuU",
+    "androidValue": "com.clickme.clickmelive.debug:id/button_share",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "magazaProfilindekiVideolarSekmesiButonuU",
+    "androidValue": "com.clickme.clickmelive.debug:id/button_videos",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "magazaDetayindanRandomVideoSecmeU",
+    "androidValue": "//*[@resource-id='com.clickme.clickmelive.debug:id/card_view']",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+  {
+    "key": "videoAcildiginaDairKontrolEventTypeU",
+    "androidValue": "com.clickme.clickmelive.debug:id/text_view_event_type",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  }
+  ]
