@@ -30,7 +30,7 @@ public class HookImpl {
     private Logger logger = LoggerFactory.getLogger(getClass());
     protected static AppiumDriver<MobileElement> appiumDriver;
     protected static FluentWait<AppiumDriver> appiumFluentWait;
-    public static boolean localAndroid = false;
+    public static boolean localAndroid = true;
     protected static Selector selector;
     DesiredCapabilities capabilities;
     URL localUrl;

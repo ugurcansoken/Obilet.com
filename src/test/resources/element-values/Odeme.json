@@ -225,8 +225,8 @@
     "key": "kartBilgileriSayfasindanGeriDonButonuOD",
     "androidValue": "com.clickme.clickmelive.debug:id/ivBack",
     "androidType": "id",
-    "iosValue": "",
-    "iosType": "xpath"
+    "iosValue": "icon_back",
+    "iosType": "accessibility"
   },{
     "key": "adresBilgileriSayfasindanGeriDonButonuOD",
     "androidValue": "com.clickme.clickmelive.debug:id/ivBack",

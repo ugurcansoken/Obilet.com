@@ -49,7 +49,7 @@ Marka Profil Kontrolu
 tags: markaProfilKontrolu
 
 * Uygulamanin acildigi kontrol edilir
-/* Test Kullanicisi ile Login Olunur
+* Test Kullanicisi ile Login Olunur
 * Urunler sayfasina gidilir
 * Urunler sayfasinda giyim kategorisine gidilir
 * Markalar basligina scroll edilir

@@ -33,7 +33,7 @@
     "key": "urunlerSayfasindanRandomUrunSecilirPS",
     "androidValue": "//*[@resource-id='com.clickme.clickmelive.debug:id/tvProductTitle']",
     "androidType": "xpath",
-    "iosValue": "",
+    "iosValue": "//*[@name='ProductCell.ProductName']",
     "iosType": "xpath"
   },{
     "key": "siparislerimButonuPS",
@@ -51,38 +51,38 @@
     "key": "GirisYapmayanKullanicininProfilSayfasiMesajiPS",
     "androidValue": "com.clickme.clickmelive.debug:id/text_view_no_content",
     "androidType": "id",
-    "iosValue": "",
-    "iosType": "xpath"
+    "iosValue": "Hesabını görüntüleyebilmek için lütfen giriş yap",
+    "iosType": "accessibility"
   },{
     "key": "GirisYapButonuPS",
     "androidValue": "com.clickme.clickmelive.debug:id/button_no_content_action",
     "androidType": "id",
-    "iosValue": "",
-    "iosType": "xpath"
+    "iosValue": "ProfileView.LoginButton",
+    "iosType": "accessibility"
   },{
     "key": "TelefonNumarasiTextboxiPS",
     "androidValue": "com.clickme.clickmelive.debug:id/edit_text_phone_number",
     "androidType": "id",
-    "iosValue": "",
-    "iosType": "xpath"
+    "iosValue": "EnterPhoneView.PhoneField",
+    "iosType": "accessibility"
   },{
     "key": "TelefonNumarasiKoduGonderButonuPS",
     "androidValue": "com.clickme.clickmelive.debug:id/button_send_otp",
     "androidType": "id",
-    "iosValue": "",
-    "iosType": "xpath"
+    "iosValue": "EnterPhoneView.SendButton",
+    "iosType": "accessibility"
   },{
     "key": "KimliginiDogrulamaTextboxiPS",
     "androidValue": "com.clickme.clickmelive.debug:id/edit_text_code",
     "androidType": "id",
-    "iosValue": "",
-    "iosType": "xpath"
+    "iosValue": "ValidatePhone.PhoneField",
+    "iosType": "accessibility"
   },{
     "key": "KimliginiDogrulamaSayfasiDogrulamaButonuPS",
     "androidValue": "com.clickme.clickmelive.debug:id/button_send_otp",
     "androidType": "id",
-    "iosValue": "",
-    "iosType": "xpath"
+    "iosValue": "ValidatePhone.ValidateButton",
+    "iosType": "accessibility"
   },{
     "key": "ProfilSayfasiKontroluPS",
     "androidValue": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.TextView",
@@ -183,31 +183,31 @@
     "key": "magazaDetayindaUrunListesiPS",
     "androidValue": "//*[@resource-id='com.clickme.clickmelive.debug:id/productView']",
     "androidType": "xpath",
-    "iosValue": "",
+    "iosValue": "//*[@name='ProductCell.ProductName']",
     "iosType": "xpath"
   },{
     "key": "sepeteEkleButonuPS",
     "androidValue": "com.clickme.clickmelive.debug:id/button_add_basket",
     "androidType": "id",
-    "iosValue": "",
-    "iosType": "xpath"
+    "iosValue": "**/XCUIElementTypeStaticText[`label == \"Sepete Ekle\"`]",
+    "iosType": "classChain"
   },{
     "key": "urunDetayindaSepetButonuPS",
     "androidValue": "com.clickme.clickmelive.debug:id/button_basket",
     "androidType": "id",
-    "iosValue": "",
-    "iosType": "xpath"
+    "iosValue": "img_product_detail_basket",
+    "iosType": "accessibility"
   },{
     "key": "cikisYapButonuPS",
     "androidValue": "com.clickme.clickmelive.debug:id/layout_logout",
     "androidType": "id",
-    "iosValue": "",
-    "iosType": "xpath"
+    "iosValue": "Çıkış Yap",
+    "iosType": "accessibility"
   },{
     "key": "cikisYapButonuOnaylamaPS",
     "androidValue": "com.clickme.clickmelive.debug:id/button_primary",
     "androidType": "id",
-    "iosValue": "",
+    "iosValue": "(//XCUIElementTypeStaticText[@name='Çıkış Yap'])[2]",
     "iosType": "xpath"
   },{
     "key": "kartBilgilerimButonuPS",
@@ -407,5 +407,11 @@
     "androidType": "id",
     "iosValue": "",
     "iosType": "xpath"
+  },{
+    "key": "KlavyeyiKapatButonuPS",
+    "androidValue": "",
+    "androidType": "",
+    "iosValue": "Done",
+    "iosType": "accessibility"
   }
 ]

@@ -1,4 +1,4 @@
-Anasayfa Senaryoları
+Anasayfa Senaryolari
 =====================
 Created by ugurcan on 23.01.2023
 

@@ -3,20 +3,26 @@
   "key": "firsatlarSayfasiBadgeU",
   "androidValue": "com.clickme.clickmelive.debug:id/ivCampaignBtn",
   "androidType": "id",
-  "iosValue": "",
+  "iosValue": "(//XCUIElementTypeOther[@name='ProductPage.Banner'])[1]",
   "iosType": "xpath"
 },{
   "key": "firsatlarSayfasiBaslikKontroluU",
   "androidValue": "(//*[@resource-id='com.clickme.clickmelive.debug:id/tvTitle'])[1]",
   "androidType": "xpath",
-  "iosValue": "",
+  "iosValue": "//XCUIElementTypeStaticText[@name='Fırsat Dünyası']",
   "iosType": "xpath"
 },{
   "key": "urunlerTumunuGorButonuU",
   "androidValue": "//*[@resource-id='com.clickme.clickmelive.debug:id/tv_see_all']",
   "androidType": "xpath",
-  "iosValue": "",
+  "iosValue": "//XCUIElementTypeButton[@name='ProductGroup.SeeAll']",
   "iosType": "xpath"
+},{
+  "key": "videoluUrunlerTumunuGorButonuU",
+  "androidValue": "",
+  "androidType": "xpath",
+  "iosValue": "EventGroup.SeeAll",
+  "iosType": "accessibility"
 },{
   "key": "urunlerTumunuGorSayfasininKontroluU",
   "androidValue": "//*[@resource-id='com.clickme.clickmelive.debug:id/ivCoverPhoto']",
@@ -27,38 +33,44 @@
   "key": "bannerU",
   "androidValue": "(//*[@resource-id='com.clickme.clickmelive.debug:id/view_pager_banners'])[1]",
   "androidType": "xpath",
-  "iosValue": "",
+  "iosValue": "(//XCUIElementTypeCollectionView[@name=\"ProductPage.BannerList\"])[2]",
   "iosType": "xpath"
 },{
   "key": "markalarBasligiU",
   "androidValue": "//*[@text='Markalar']",
   "androidType": "xpath",
-  "iosValue": "",
-  "iosType": "xpath"
+  "iosValue": "Markalar",
+  "iosType": "accessibility"
 },{
   "key": "ecrouBasligiU",
   "androidValue": "//*[@text='Ecrou']",
   "androidType": "xpath",
-  "iosValue": "",
+  "iosValue": "//XCUIElementTypeStaticText[@name='Ecrou']",
   "iosType": "xpath"
 },{
   "key": "randomVideoSecmeU",
   "androidValue": "//*[@resource-id='com.clickme.clickmelive.debug:id/text_view_title']",
   "androidType": "xpath",
-  "iosValue": "",
+  "iosValue": "//*[@name='EventCell.TitleLabel']",
   "iosType": "xpath"
 },{
   "key": "tumVideolariGoruntuleKontroluU",
   "androidValue": "//*[@resource-id='com.clickme.clickmelive.debug:id/clViewerCount']",
   "androidType": "xpath",
-  "iosValue": "",
+  "iosValue": "//*[@name='EventCell.Video']",
   "iosType": "xpath"
 },{
   "key": "tumVideolariGoruntuleSayfasindanRandomVideoSecmeU",
   "androidValue": "//*[@resource-id='com.clickme.clickmelive.debug:id/image_view_cover']",
   "androidType": "xpath",
-  "iosValue": "",
+  "iosValue": "//*[@name='EventCell.Video']",
   "iosType": "xpath"
+},{
+  "key": "videoIcerisindeBulunanVideoBadgeU",
+  "androidValue": "",
+  "androidType": "",
+  "iosValue": "Video",
+  "iosType": "accessibility"
 },{
   "key": "videoIcerisindeUrunleriListelemeButonuU",
   "androidValue": "com.clickme.clickmelive.debug:id/ivProduct",

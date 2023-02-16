@@ -14,7 +14,7 @@ This is a concept file with following syntax for each concept.
 
 # Kesfette urun cantasi acilir, sepete urun eklenir ve kontrol edilir
 * Elementine tıkla "AnasayfaMenuButonuPS"
-* Elementine tıkla "kesfetVideosundakiUrunCantasiA"
+* Elementine tıkla "videoIcerisindekiUrunCantasiA"
 * "yayindaListelenenUrunlerdenSecilenUrununIsmiU" elementin text degeri bir dizine at
 * Elementine tıkla "videoIcerisindeUrunuSepeteEklemeButonuU"
 * Elementine tıkla "sepetimMenuButonuSPT"
@@ -23,7 +23,7 @@ This is a concept file with following syntax for each concept.
 
 # Kesfette urun cantasi acilir, urun secilir, urunun detayina gidilir ve kontrol edilir
 * Elementine tıkla "AnasayfaMenuButonuPS"
-* Elementine tıkla "kesfetVideosundakiUrunCantasiA"
+* Elementine tıkla "videoIcerisindekiUrunCantasiA"
 * "yayindaListelenenUrunlerdenSecilenUrununIsmiU" elementin text degeri bir dizine at
 * Elementine tıkla "yayindaListelenenUrunlerdenSecilenUrununIsmiU"
 * "urunDetayindakiUrunIsmıSPT" elementin text degeri bir dizine at
@@ -31,7 +31,7 @@ This is a concept file with following syntax for each concept.
 
 # Kesfette urun cantasi acilir, urun secilir, urun fiyati kaydedilir, urunun detayina gidilir ve kontrol edilir
 * Elementine tıkla "AnasayfaMenuButonuPS"
-* Elementine tıkla "kesfetVideosundakiUrunCantasiA"
+* Elementine tıkla "videoIcerisindekiUrunCantasiA"
 * "urunlerSayfasiIlkUrununFiyatTextiUD" elementin text degeri bir dizine at
 * Elementine tıkla "yayindaListelenenUrunlerdenSecilenUrununIsmiU"
 * "urunDetayindanUrunFiyatiKaydetmeUD" elementin text degeri bir dizine at
@@ -58,7 +58,7 @@ This is a concept file with following syntax for each concept.
 * "yayinAkisindakiRastgeleYayinSecmeA" li elementi rasgele sec
 
 # Yayin detayindaki urun sepeti acilir ve kontrol edilir
-* Elementine tıkla "kesfetVideosundakiUrunCantasiA"
+* Elementine tıkla "videoIcerisindekiUrunCantasiA"
 * "yayindaListelenenUrunlerdenSecilenUrununIsmiU" elementinin görünürlüğü kontrol edilir
 
 # Kucuk moda alinan yayin kapatilir

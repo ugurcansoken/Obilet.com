@@ -59,8 +59,8 @@
     "key": "urunDetayindanGeriDonmeButonuSPT",
     "androidValue": "com.clickme.clickmelive.debug:id/btn_back",
     "androidType": "id",
-    "iosValue": "",
-    "iosType": "xpath"
+    "iosValue": "img_back",
+    "iosType": "accessibility"
   },
   {
     "key": "sepettekiUrunSayisiTextiSPT",
@@ -172,8 +172,8 @@
     "key": "sepetimdenGeriDonmeButonuSPT",
     "androidValue": "com.clickme.clickmelive.debug:id/button_left",
     "androidType": "id",
-    "iosValue": "",
-    "iosType": "xpath"
+    "iosValue": "icon_back",
+    "iosType": "accessibility"
   },
   {
     "key": "urunDetayindakiFiyatiSPT",

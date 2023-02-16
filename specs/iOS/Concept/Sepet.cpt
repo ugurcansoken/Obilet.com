@@ -6,3 +6,6 @@ This is a concept file with following syntax for each concept.
 * Elementine tıkla "sepetimMenuButonuSPT"
 * "sepettekiUrunSayisiniAzaltmaButonuSPT" li element varsa tıkla
 * "sepetBosTextiPS" elementinin "text" attirbute degeri "Henüz sepetine ürün atmadın" iceriyor mu
+
+# Urun detayindan sepete gidilir iOS
+* Elementine tıkla "urunDetayindaSepetButonuPS"

@@ -18,11 +18,11 @@
 "iosValue": "",
 "iosType": "xpath"
 }, {
-"key": "kesfetVideosundakiUrunCantasiA",
+"key": "videoIcerisindekiUrunCantasiA",
 "androidValue": "com.clickme.clickmelive.debug:id/clBag",
 "androidType": "id",
-"iosValue": "",
-"iosType": "xpath"
+"iosValue": "img_event_products",
+"iosType": "accessibility"
 }, {
 "key": "kesfetSayfasiYayinAkisiButonuA",
 "androidValue": "com.clickme.clickmelive.debug:id/tab_live",
