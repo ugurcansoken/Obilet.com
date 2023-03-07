@@ -37,6 +37,7 @@ görülür.
 
 2.6 Checkout sayfası açıldığı doğrulanır.
 
+
 Kullanılan Teknolojiler
 
 Java - Page Object Model
