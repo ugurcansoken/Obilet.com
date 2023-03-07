@@ -1,8 +1,8 @@
-package com.clickmelive.selector;
+package com.obilet.selector;
 
-import com.clickmelive.helper.StoreHelper;
-import com.clickmelive.model.ElementInfo;
-import com.clickmelive.model.SelectorInfo;
+import com.obilet.helper.StoreHelper;
+import com.obilet.model.ElementInfo;
+import com.obilet.model.SelectorInfo;
 import org.openqa.selenium.By;
 
 public interface Selector {

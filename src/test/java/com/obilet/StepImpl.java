@@ -1,8 +1,8 @@
-package com.clickmelive;
+package com.obilet;
 
-import com.clickmelive.helper.RandomString;
-import com.clickmelive.helper.StoreHelper;
-import com.clickmelive.model.SelectorInfo;
+import com.obilet.helper.RandomString;
+import com.obilet.helper.StoreHelper;
+import com.obilet.model.SelectorInfo;
 import com.thoughtworks.gauge.Step;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
@@ -27,8 +27,7 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 import static java.time.Duration.ofMillis;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class StepImpl extends HookImpl {
 
@@ -209,6 +208,18 @@ public class StepImpl extends HookImpl {
         logger.info(key + " elementine tıkladı");
         System.out.println("-----------------------------------------------------------------");
 
+    }
+
+    @Step("<key> elementine tiklayamadigi dogrulanir")
+    public void unableToClick(String key){
+        MobileElement element = findElementByKey(key);
+        if(!element.isDisplayed()){
+            logger.info(key + " elementine tiklanamadigi dogrulandi");
+        }
+        else {
+
+            fail(key + " elementine tiklanabiliyor");
+        }
     }
 
     @Step({"<key> elementinin <value> attirbute degeri <check> iceriyor mu"})
@@ -589,9 +600,9 @@ public class StepImpl extends HookImpl {
             int width = d.width;
             System.out.println(width + "  " + height);
 
-            int swipeStartWidth = width / 2, swipeEndWidth = width / 2;
+            int swipeStartWidth = width / 4, swipeEndWidth = width / 6;
             int swipeStartHeight = (height * 10) / 100;
-            int swipeEndHeight = (height * 60) / 100;
+            int swipeEndHeight = (height * 36) / 100;
             //appiumDriver.swipe(swipeStartWidth, swipeStartHeight, swipeEndWidth, swipeEndHeight, 1000);
             new TouchAction((AndroidDriver) appiumDriver)
                     .press(PointOption.point(swipeStartWidth, swipeEndHeight))
@@ -766,6 +777,80 @@ public class StepImpl extends HookImpl {
         Point elementLocation = findElementByKeyWithoutAssert(key).getLocation();
         pointToPointSwipeWithCoordinats(width - 50, elementLocation.getY(), 40, elementLocation.getY(), times);
     }
+    @Step("<key> elementinin adres bilgilerini <times> kere kaydırarak temizle")
+    public void adresTemizleme(String key, int times) throws InterruptedException {
+        Dimension d = appiumDriver.manage().window().getSize();
+        int height = d.height;
+        int width = d.width;
+        boolean ifExist2 = doesElementExistByKey(key, 5);
+        if(ifExist2){
+            Point elementLocation = findElementByKeyWithoutAssert(key).getLocation();
+            for (int i =0; i<key.length();i++){
+                boolean ifExist = doesElementExistByKey(key, 5);
+                if(ifExist){
+                    pointToPointSwipeWithCoordinats(width - 50, elementLocation.getY(), 40, elementLocation.getY(), times);
+                    waitBySecond(1);
+                    clickByKey("adresBilgisiniSilmeyiOnaylamaButonuOD");
+                }
+                else {break;}}}}
+    @Step("<key> elementinin adres bilgilerini <times> kere kaydırarak temizle iOS")
+    public void adresTemizlemeIOS(String key, int times) throws InterruptedException {
+        Dimension d = appiumDriver.manage().window().getSize();
+        int height = d.height;
+        int width = d.width;
+        boolean ifExist2 = doesElementExistByKey(key, 5);
+        if(ifExist2){
+            Point elementLocation = findElementByKeyWithoutAssert(key).getLocation();
+            for (int i =0; i<key.length();i++){
+                boolean ifExist = doesElementExistByKey(key, 5);
+                if(ifExist){
+                    pointToPointSwipeWithCoordinats(width - 50, elementLocation.getY(), 40, elementLocation.getY(), times);
+                    waitBySecond(1);
+                }
+                else {break;}}}}
+
+
+
+
+        @Step("<key> elementinin kart bilgisini <times> kere kaydırarak temizle")
+    public void kartBilgisiTemizleme(String key, int times) throws InterruptedException {
+        Dimension d = appiumDriver.manage().window().getSize();
+        int height = d.height;
+        int width = d.width;
+            boolean ifExist2 = doesElementExistByKey(key, 5);
+            if(ifExist2){
+                Point elementLocation = findElementByKeyWithoutAssert(key).getLocation();
+                for (int i = 0; i< key.length(); i++){
+                    boolean ifExist = doesElementExistByKey(key, 5);
+                    if(ifExist){
+                        pointToPointSwipeWithCoordinats(width - 50, elementLocation.getY(), 40, elementLocation.getY(), times);
+                        waitBySecond(1);}
+                    else{break;}
+                }
+            }
+          }
+    @Step("<key> elementinin favori urunlerini <times> kere kaydırarak temizle")
+    public void favoriUrunSilme(String key, int times) throws InterruptedException {
+        Dimension d = appiumDriver.manage().window().getSize();
+
+        int height = d.height;
+        int width = d.width;
+        boolean ifExisttwo = doesElementExistByKey(key, 5);
+
+        if(ifExisttwo){
+            Point elementLocation = findElementByKeyWithoutAssert(key).getLocation();
+
+            for (int i = 0; i< key.length(); i++){
+                boolean ifExist = doesElementExistByKey(key, 5);
+                if(ifExist){
+                    pointToPointSwipeWithCoordinats(width - 50, elementLocation.getY(), 40, elementLocation.getY(), times);
+                    waitBySecond(1);
+                    clickByKey("favoriUrunSilmeyiOnaylamaButonuOD");
+                }
+                else{break;}
+            }
+        }
+          }
 
     @Step("<key> li elementi hizala ve sagdan sola kaydır <times> kere y cordinatına <number> ekle")
     public void horizontalSwipeWithElement(String key, int times, int number) throws InterruptedException {
@@ -789,6 +874,8 @@ public class StepImpl extends HookImpl {
                     .waitAction(WaitOptions.waitOptions(ofMillis(1000)))
                     .moveTo(PointOption.point(endX, endY))
                     .release().perform();
+            logger.info("SWİPE EDİLDİ");
+            logger.info("-----------------------------------------------------------");
         }
 
 
@@ -823,7 +910,6 @@ public class StepImpl extends HookImpl {
         appiumDriver.launchApp();
         logger.info("uygulama yeniden başlatıldı");
         waitBySecond(5);
-        existClickByKey("ızınVer");
 
     }
 
@@ -924,6 +1010,7 @@ public class StepImpl extends HookImpl {
         Random random = new Random();
         int randomNumber = random.nextInt(productList.size());
         productList.get(randomNumber).click();
+        logger.info(randomNumber + ". elemente tiklandi");
     }
 
 
@@ -1165,8 +1252,6 @@ public class StepImpl extends HookImpl {
      //   logger.info("element varsa tıkla yoksa devam et başladı");
         boolean ifExist = doesElementExistByKey(key, 5);
 
-
-
         if (ifExist) {
             findElementByKey(key).click();
             logger.info(key + " elemente tıkladı");
@@ -1246,6 +1331,39 @@ public class StepImpl extends HookImpl {
         }
     }
 
+    @Step("<key> yoksa cikis Yapilir")
+    public void logout(String key){
+        boolean logout = doesElementExistByKey(key,5);
+        if(!logout){
+            appiumDriver.findElement(By.id("com.clickme.clickmelive.debug:id/layout_logout")).click();
+            appiumDriver.findElement(By.id("com.clickme.clickmelive.debug:id/button_primary")).click();
+            appiumDriver.findElement(By.id("com.clickme.clickmelive.debug:id/profile")).click();
+        }
+        else {
+            logger.info("Uygulamaya Login Olunuyor");
+            logger.info("----------------------------------------------------");
+        }
+
+    }
+    @Step("<key> yoksa cikis Yapilir iOS")
+    public void logoutIOS(String key){
+        boolean logout = doesElementExistByKey(key,5);
+        if(!logout){
+           // appiumDriver.findElement(By.xpath("//XCUIElementTypeStaticText[@name='Çıkış Yap']")).click();
+           // appiumDriver.findElement(By.xpath("//XCUIElementTypeButton[@name='Çıkış Yap']")).click();
+            // appiumDriver.findElement(By.xpath("//XCUIElementTypeButton[@name='TabBar.Profile']")).click();
+            clickByKey("cikisYapButonuPS");
+            clickByKey("cikisYapButonuOnaylamaPS");
+            clickByKey("ProfilimMenuButonuPS");
+        }
+        else {
+            logger.info("Uygulamaya Login Olunuyor");
+            logger.info("----------------------------------------------------");
+        }
+
+
+
+    }
 
 
 

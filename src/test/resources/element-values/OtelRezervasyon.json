@@ -1,0 +1,83 @@
+[
+  {
+    "key": "otelTabi",
+    "androidValue": "//*[@text='Otel']",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },{
+    "key": "otelSayfasiAcildigininKontrolu",
+    "androidValue": "com.obilet.androidside:id/find_hotel_reservation_find_button",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },{
+    "key": "NereyeButonu",
+    "androidValue": "com.obilet.androidside:id/find_hotel_reservation_to_where_layout",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  }
+,{
+    "key": "IlListesi",
+    "androidValue": "//*[@resource-id='com.obilet.androidside:id/find_journey_location_name_textView']",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },{
+    "key": "gidisTarihiButonu",
+    "androidValue": "com.obilet.androidside:id/find_hotel_reservation_departure_date_layout",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },{
+    "key": "gidisTarihiSecimi",
+    "androidValue": "//*[@resource-id='com.obilet.androidside:id/tv_day_number']",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },{
+    "key": "donusTarihiSecimi",
+    "androidValue": "//*[@resource-id='com.obilet.androidside:id/tv_day_number']",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },{
+    "key": "otelAraButonu",
+    "androidValue": "com.obilet.androidside:id/find_hotel_reservation_find_button",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },{
+    "key": "otellerinListelendigininKontrolu",
+    "androidValue": "//*[@resource-id='com.obilet.androidside:id/list_card']",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },{
+    "key": "otelSecimi",
+    "androidValue": "//*[@resource-id='com.obilet.androidside:id/list_card']",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },{
+    "key": "odaSecButonu",
+    "androidValue": "com.obilet.androidside:id/select_room_button",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },{
+    "key": "odaDetayiSecilir",
+    "androidValue": "//*[@resource-id='com.obilet.androidside:id/title_select_room_button']",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },{
+    "key": "checkoutKontrolu",
+    "androidValue": "com.obilet.androidside:id/price_info_header_checkout",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  }
+
+  ]

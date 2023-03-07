@@ -1,6 +1,6 @@
-package com.clickmelive.selector;
+package com.obilet.selector;
 
-import com.clickmelive.model.ElementInfo;
+import com.obilet.model.ElementInfo;
 import io.appium.java_client.MobileBy;
 import org.openqa.selenium.By;
 

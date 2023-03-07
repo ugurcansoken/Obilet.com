@@ -1,6 +1,6 @@
-package com.clickmelive.selector;
+package com.obilet.selector;
 
-import com.clickmelive.model.ElementInfo;
+import com.obilet.model.ElementInfo;
 import org.openqa.selenium.By;
 
 public class AndroidSelector implements Selector {

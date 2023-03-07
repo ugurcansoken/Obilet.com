@@ -1,4 +1,4 @@
-package com.clickmelive.selector;
+package com.obilet.selector;
 
 public class SelectorFactory {
 

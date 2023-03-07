@@ -1,0 +1,72 @@
+[
+  {
+    "key": "uygulamaninAcildigiKontrolu",
+    "androidValue": "com.obilet.androidside:id/toolbar_image_header",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },
+{
+    "key": "hesabimButonu",
+    "androidValue": "com.obilet.androidside:id/bottom_nav_account",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },{
+    "key": "uyeGirisiYapinButonu",
+    "androidValue": "com.obilet.androidside:id/login_button_main_account",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },{
+    "key": "uyeGirisiBasligiTexti",
+    "androidValue": "com.obilet.androidside:id/toolbar_title",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },{
+    "key": "hemenUyeOlTexti",
+    "androidValue": "com.obilet.androidside:id/sign_up_now_layout",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },{
+    "key": "emailTextboxi",
+    "androidValue": "(//*[@resource-id='com.obilet.androidside:id/input_editText'])[1]",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },{
+    "key": "sifreTextboxi",
+    "androidValue": "(//*[@resource-id='com.obilet.androidside:id/input_editText'])[2]",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },{
+    "key": "uyeOlButonu",
+    "androidValue": "com.obilet.androidside:id/sign_up_button",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },{
+    "key": "loginOldugunuDogrulamaKontrolu",
+    "androidValue": "//*[@resource-id='com.obilet.androidside:id/item_title_textView']",
+    "androidType": "xpath",
+    "iosValue": "",
+    "iosType": "xpath"
+  },{
+    "key": "araButonu",
+    "androidValue": "com.obilet.androidside:id/bottom_nav_find_journey",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },{
+    "key": "anasayfaninAcildiginiDogrulamaKontrolu",
+    "androidValue": "com.obilet.androidside:id/journey_type_tabLayout",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  }
+
+
+]

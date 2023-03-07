@@ -1,8 +1,8 @@
-package com.clickmelive;
+package com.obilet;
 
-import com.clickmelive.selector.Selector;
-import com.clickmelive.selector.SelectorFactory;
-import com.clickmelive.selector.SelectorType;
+import com.obilet.selector.Selector;
+import com.obilet.selector.SelectorFactory;
+import com.obilet.selector.SelectorType;
 import com.thoughtworks.gauge.AfterScenario;
 import com.thoughtworks.gauge.AfterStep;
 import com.thoughtworks.gauge.BeforeScenario;
@@ -87,8 +87,8 @@ public class HookImpl {
         capabilities.setCapability(MobileCapabilityType.FULL_RESET, false);
         capabilities.setCapability("unicodeKeyboard", false);
         capabilities.setCapability("resetKeyboard", false);
-        capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.clickme.clickmelive.debug");
-        capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.clickme.clickmelive.core.activity.MainActivity");
+        capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.obilet.androidside");
+        capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.obilet.androidside.presentation.screen.splash.activity.SplashScreen");
 
 
         if (isLocal) {
@@ -111,7 +111,7 @@ public class HookImpl {
         capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
         capabilities.setCapability(MobileCapabilityType.FULL_RESET, false);
         capabilities
-                .setCapability("bundleId", "com.clickmelive.clickmelive");
+                .setCapability("bundleId", "com.obilet.obilet");
         if (!islocal) {
             capabilities.setCapability("key", System.getenv("key"));
             capabilities.setCapability("waitForAppScript", "$.delay(1000);");
@@ -142,6 +142,8 @@ public class HookImpl {
         if (appiumDriver != null) {
             appiumDriver.quit();
         }
+
+
 
         logger.info("*************************************************************************" + "\r\n");
         logger.info("TEST BİTTİ" + "\r\n");

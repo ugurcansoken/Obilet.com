@@ -1,4 +1,4 @@
-package com.clickmelive.helper;
+package com.obilet.helper;
 
 import java.security.SecureRandom;
 import java.util.Locale;

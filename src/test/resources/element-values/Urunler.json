@@ -3,13 +3,13 @@
   "key": "firsatlarSayfasiBadgeU",
   "androidValue": "com.clickme.clickmelive.debug:id/ivCampaignBtn",
   "androidType": "id",
-  "iosValue": "(//XCUIElementTypeOther[@name='ProductPage.Banner'])[1]",
+  "iosValue": "(//XCUIElementTypeOther[@name=\"ProductPage.Banner\"])[1]",
   "iosType": "xpath"
 },{
   "key": "firsatlarSayfasiBaslikKontroluU",
   "androidValue": "(//*[@resource-id='com.clickme.clickmelive.debug:id/tvTitle'])[1]",
   "androidType": "xpath",
-  "iosValue": "//XCUIElementTypeStaticText[@name='Fırsat Dünyası']",
+  "iosValue": "//XCUIElementTypeStaticText[@name=\"Fırsat Dünyası\"]",
   "iosType": "xpath"
 },{
   "key": "urunlerTumunuGorButonuU",
@@ -27,7 +27,7 @@
   "key": "urunlerTumunuGorSayfasininKontroluU",
   "androidValue": "//*[@resource-id='com.clickme.clickmelive.debug:id/ivCoverPhoto']",
   "androidType": "xpath",
-  "iosValue": "",
+  "iosValue": "//*[@name='ProductCell']",
   "iosType": "xpath"
 },{
   "key": "bannerU",
@@ -75,68 +75,82 @@
   "key": "videoIcerisindeUrunleriListelemeButonuU",
   "androidValue": "com.clickme.clickmelive.debug:id/ivProduct",
   "androidType": "id",
-  "iosValue": "",
-  "iosType": "xpath"
+  "iosValue": "img_event_products",
+  "iosType": "accessibility"
 },{
   "key": "videoIcerisindeUrunuSepeteEklemeButonuU",
-  "androidValue": "(//*[@resource-id='com.clickme.clickmelive.debug:id/ivAdd'])[1]",
-  "androidType": "xpath",
-  "iosValue": "",
+  "androidValue": "com.clickme.clickmelive.debug:id/ivAdd",
+  "androidType": "id",
+  "iosValue": "(//XCUIElementTypeImage[@name=\"EventProduct.AddToBasket\"])[1]",
   "iosType": "xpath"
 },{
   "key": "videoIcerisindekiSepetButonuU",
   "androidValue": "com.clickme.clickmelive.debug:id/button_basket",
   "androidType": "id",
-  "iosValue": "",
-  "iosType": "xpath"
+  "iosValue": "FeedCell.BasketView",
+  "iosType": "accessibility"
 },
   {
     "key": "yayindaListelenenUrunlerdenSecilenUrununIsmiU",
     "androidValue": "(//*[@resource-id='com.clickme.clickmelive.debug:id/tvName'][1])",
     "androidType": "xpath",
-    "iosValue": "",
+    "iosValue": "(//XCUIElementTypeStaticText[@name=\"ProductCell.ProductName\"])[10]",
     "iosType": "xpath"
   },
   {
     "key": "yayindaMagazaDetayinaGitmeButonuU",
     "androidValue": "com.clickme.clickmelive.debug:id/image_view_user",
     "androidType": "id",
-    "iosValue": "",
-    "iosType": "xpath"
+    "iosValue": "FeedCell.SellerImage",
+    "iosType": "accessibility"
   },
   {
     "key": "magazaDetayindakiUrunSayisiU",
     "androidValue": "com.clickme.clickmelive.debug:id/text_view_follower_count",
     "androidType": "id",
-    "iosValue": "",
+    "iosValue": "//XCUIElementTypeButton[@name=\"Video\"]",
     "iosType": "xpath"
   },
   {
     "key": "videoIcerisindenPaylasButonuU",
     "androidValue": "com.clickme.clickmelive.debug:id/button_share",
     "androidType": "id",
-    "iosValue": "",
-    "iosType": "xpath"
+    "iosValue": "FeedCell.ShareView",
+    "iosType": "accessibility"
   },
   {
     "key": "magazaProfilindekiVideolarSekmesiButonuU",
     "androidValue": "com.clickme.clickmelive.debug:id/button_videos",
     "androidType": "id",
-    "iosValue": "",
+    "iosValue": "//XCUIElementTypeButton[@name='Video']",
     "iosType": "xpath"
   },
   {
     "key": "magazaDetayindanRandomVideoSecmeU",
     "androidValue": "//*[@resource-id='com.clickme.clickmelive.debug:id/card_view']",
     "androidType": "xpath",
-    "iosValue": "",
+    "iosValue": "//*[@name='EventCell.Video']",
     "iosType": "xpath"
   },
   {
     "key": "videoAcildiginaDairKontrolEventTypeU",
     "androidValue": "com.clickme.clickmelive.debug:id/text_view_event_type",
     "androidType": "id",
-    "iosValue": "",
-    "iosType": "xpath"
+    "iosValue": "icon_type_video",
+    "iosType": "accessibility"
+  },
+  {
+    "key": "magazaDetayindaMagazaninIsimTextiU",
+    "androidValue": "",
+    "androidType": "id",
+    "iosValue": "Takip Et",
+    "iosType": "accessibility"
+  },
+  {
+    "key": "yayinKucultmeButonuU",
+    "androidValue": "",
+    "androidType": "id",
+    "iosValue": "icon_minimize",
+    "iosType": "accessibility"
   }
   ]

@@ -1,4 +1,4 @@
-package com.clickmelive.model;
+package com.obilet.model;
 
 import org.openqa.selenium.By;
 
