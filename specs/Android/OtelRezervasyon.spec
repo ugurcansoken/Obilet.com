@@ -15,14 +15,9 @@ tags: otelRezervasyonuYapma
 * Elementine tıkla "NereyeButonu"
 * Klavyeyi kapat
 * "IlListesi" li elementi rasgele sec
-* Elementine tıkla "gidisTarihiButonu"
-* "gidisTarihiSecimi" li elementi rasgele sec
-* "1" kere hafif yukarı doğru kaydır
-* "donusTarihiSecimi" li elementi rasgele sec
 * Elementine tıkla "otelAraButonu"
 * "otellerinListelendigininKontrolu" elementinin görünürlüğü kontrol edilir
 * "otelSecimi" li elementi rasgele sec
 * Elementine tıkla "odaSecButonu"
 * "odaDetayiSecilir" li elementi rasgele sec
 * "checkoutKontrolu" elementinin görünürlüğü kontrol edilir
-* "5" saniye bekle

@@ -14,7 +14,7 @@ tags: kayitOlma
 * Elementine tıkla "uyeGirisiYapinButonu"
 * "uyeGirisiBasligiTexti" elementinin görünürlüğü kontrol edilir
 * Elementine tıkla "hemenUyeOlTexti"
-* "ugurcadf@gmail.com" textini "emailTextboxi" elementine yaz
+* "ugurca3df@gmail.com" textini "emailTextboxi" elementine yaz
 * "ugurcansoken" textini "sifreTextboxi" elementine yaz
 * Elementine tıkla "uyeOlButonu"
 * Elementine tıkla "hesabimButonu"
