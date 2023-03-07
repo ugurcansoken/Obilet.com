@@ -356,6 +356,7 @@ public class StepImpl extends HookImpl {
     }
 
 
+
     @Step({"Klavyeyi kapat", "Hide keyboard"})
     public void hideAndroidKeyboard() {
         try {

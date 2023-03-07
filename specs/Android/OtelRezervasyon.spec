@@ -21,3 +21,4 @@ tags: otelRezervasyonuYapma
 * Elementine tıkla "odaSecButonu"
 * "odaDetayiSecilir" li elementi rasgele sec
 * "checkoutKontrolu" elementinin görünürlüğü kontrol edilir
+
