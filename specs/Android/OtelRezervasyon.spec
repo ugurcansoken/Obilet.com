@@ -13,8 +13,8 @@ tags: otelRezervasyonuYapma
 * Elementine tıkla "otelTabi"
 * "otelSayfasiAcildigininKontrolu" elementinin görünürlüğü kontrol edilir
 * Elementine tıkla "NereyeButonu"
-* Klavyeyi kapat
-* "IlListesi" li elementi rasgele sec
+* "İzmir" textini "gidilecekYerTextboxi" elementine yaz
+* Elementine tıkla "IlListesi"
 * Elementine tıkla "otelAraButonu"
 * "otellerinListelendigininKontrolu" elementinin görünürlüğü kontrol edilir
 * "otelSecimi" li elementi rasgele sec

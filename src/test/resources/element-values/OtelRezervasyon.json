@@ -20,7 +20,7 @@
   }
 ,{
     "key": "IlListesi",
-    "androidValue": "//*[@resource-id='com.obilet.androidside:id/find_journey_location_name_textView']",
+    "androidValue": "(//*[@resource-id='com.obilet.androidside:id/find_journey_location_name_textView'])[1]",
     "androidType": "xpath",
     "iosValue": "",
     "iosType": "xpath"
@@ -75,6 +75,12 @@
   },{
     "key": "checkoutKontrolu",
     "androidValue": "com.obilet.androidside:id/price_info_header_checkout",
+    "androidType": "id",
+    "iosValue": "",
+    "iosType": "xpath"
+  },{
+    "key": "gidilecekYerTextboxi",
+    "androidValue": "com.obilet.androidside:id/search_editText",
     "androidType": "id",
     "iosValue": "",
     "iosType": "xpath"

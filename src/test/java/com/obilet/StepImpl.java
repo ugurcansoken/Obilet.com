@@ -150,7 +150,8 @@ public class StepImpl extends HookImpl {
     @Step({"Elementine tıkla <key>", "Click element by <key>"})
     public void clickByKey(String key) {
         doesElementExistByKey(key, 5);
-        findElementByKey(key).click();
+        MobileElement element = findElementByKey(key);
+        element.click();
         logger.info(key + " elementine tıkladı");
         System.out.println("-----------------------------------------------------------------");
 
@@ -352,23 +353,6 @@ public class StepImpl extends HookImpl {
             System.out.println("SWİPE EDİLDİ");
             System.out.println("-----------------------------------------------------------------");
 
-        }
-    }
-
-
-
-    @Step({"Klavyeyi kapat", "Hide keyboard"})
-    public void hideAndroidKeyboard() {
-        try {
-
-            if (localAndroid == false) {
-                findElementWithoutAssert(By.xpath("//XCUIElementTypeButton[@name='Toolbar Done Button']")).click();
-            } else {
-                appiumDriver.hideKeyboard();
-            }
-
-        } catch (Exception ex) {
-            logger.error("Klavye kapatılamadı " + ex.getMessage());
         }
     }
 
